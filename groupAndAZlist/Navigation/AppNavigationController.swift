@@ -14,6 +14,16 @@ class AppNavigationController: UINavigationController {
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.AppThems.navBarTint]
         self.navigationBar.tintColor = UIColor.AppThems.navBarTint
         self.navigationBar.barTintColor = UIColor.AppThems.navBar
+        self.navigationBar.isTranslucent = false
+        if #available(iOS 15.0, *) {
+            self.navigationBar.backgroundColor = UIColor.AppThems.navBar
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.AppThems.navBar
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+        
     }
     
 

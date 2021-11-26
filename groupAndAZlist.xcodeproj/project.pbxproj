@@ -22,6 +22,10 @@
 		FACFCA482750EED300D876B2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA472750EED300D876B2 /* UIColor.swift */; };
 		FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA492750EEFB00D876B2 /* NotificationName.swift */; };
 		FACFCA4D2751084100D876B2 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA4C2751084100D876B2 /* AppNavigationController.swift */; };
+		FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5127510D5C00D876B2 /* Bindable.swift */; };
+		FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */; };
+		FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5527511E5500D876B2 /* NasaViewController.swift */; };
+		FACFCA582751255C00D876B2 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA572751255C00D876B2 /* CarouselFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		FACFCA472750EED300D876B2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FACFCA492750EEFB00D876B2 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		FACFCA4C2751084100D876B2 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		FACFCA5127510D5C00D876B2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCollectionViewCell.swift; sourceTree = "<group>"; };
+		FACFCA5527511E5500D876B2 /* NasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewController.swift; sourceTree = "<group>"; };
+		FACFCA572751255C00D876B2 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		FACFCA1F2750E0CE00D876B2 /* groupAndAZlist */ = {
 			isa = PBXGroup;
 			children = (
+				FACFCA5027510D3F00D876B2 /* Bind */,
 				FACFCA202750E0CE00D876B2 /* AppDelegate.swift */,
 				FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */,
 				FACFCA462750EEB200D876B2 /* Extensions */,
@@ -87,6 +96,7 @@
 				FACFCA4E275108FA00D876B2 /* Resources */,
 				FACFCA2B2750E0D400D876B2 /* LaunchScreen.storyboard */,
 				FACFCA2E2750E0D400D876B2 /* Info.plist */,
+				FACFCA572751255C00D876B2 /* CarouselFlowLayout.swift */,
 			);
 			path = groupAndAZlist;
 			sourceTree = "<group>";
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				FACFCA242750E0CE00D876B2 /* ViewController.swift */,
+				FACFCA5527511E5500D876B2 /* NasaViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FACFCA262750E0CE00D876B2 /* Main.storyboard */,
+				FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +177,14 @@
 				FACFCA422750E57300D876B2 /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FACFCA5027510D3F00D876B2 /* Bind */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA5127510D5C00D876B2 /* Bindable.swift */,
+			);
+			path = Bind;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,11 +261,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACFCA412750E1ED00D876B2 /* Model.swift in Sources */,
+				FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */,
 				FACFCA252750E0CE00D876B2 /* ViewController.swift in Sources */,
 				FACFCA3D2750E1AE00D876B2 /* JsonParsing.swift in Sources */,
 				FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */,
+				FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */,
+				FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */,
 				FACFCA3B2750E18000D876B2 /* String.swift in Sources */,
 				FACFCA482750EED300D876B2 /* UIColor.swift in Sources */,
+				FACFCA582751255C00D876B2 /* CarouselFlowLayout.swift in Sources */,
 				FACFCA3F2750E1CB00D876B2 /* ViewModel.swift in Sources */,
 				FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */,
 				FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */,
