@@ -10,7 +10,11 @@ import UIKit
 class NasaCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var iconImage: UIImageView! 
+    @IBOutlet weak var iconImage: UIImageView! {
+        didSet {
+            iconImage.layer.cornerRadius = 50
+        }
+    }
     
     func join(_ item: NasaItem) {
         

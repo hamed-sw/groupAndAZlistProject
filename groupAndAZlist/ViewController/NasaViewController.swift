@@ -66,7 +66,8 @@ extension NasaViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case .ROCKETLAUNC:
             break
         case .NASA_PLANETARY:
-            break
+            guard let vc = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { fatalError()}
+            self.navigationController?.pushViewController(vc, animated: true)
         case .SPACESHIP:
             break
         }

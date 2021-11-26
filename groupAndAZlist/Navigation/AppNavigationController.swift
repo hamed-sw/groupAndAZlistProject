@@ -19,7 +19,8 @@ class AppNavigationController: UINavigationController {
             self.navigationBar.backgroundColor = UIColor.AppThems.navBar
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.AppThems.navBar
+            appearance.backgroundColor = .systemGray
+            //UIColor.AppThems.navBar
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         }

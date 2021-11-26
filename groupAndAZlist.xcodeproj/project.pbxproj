@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA202750E0CE00D876B2 /* AppDelegate.swift */; };
 		FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */; };
-		FACFCA252750E0CE00D876B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA242750E0CE00D876B2 /* ViewController.swift */; };
 		FACFCA282750E0CE00D876B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA262750E0CE00D876B2 /* Main.storyboard */; };
 		FACFCA2A2750E0D400D876B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA292750E0D400D876B2 /* Assets.xcassets */; };
 		FACFCA2D2750E0D400D876B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA2B2750E0D400D876B2 /* LaunchScreen.storyboard */; };
@@ -26,13 +25,23 @@
 		FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */; };
 		FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5527511E5500D876B2 /* NasaViewController.swift */; };
 		FACFCA582751255C00D876B2 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA572751255C00D876B2 /* CarouselFlowLayout.swift */; };
+		FACFCA5A27515C8E00D876B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5927515C8D00D876B2 /* MainViewController.swift */; };
+		FACFCA5E2751621100D876B2 /* AZListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5D2751621100D876B2 /* AZListViewController.swift */; };
+		FACFCA602751622B00D876B2 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */; };
+		FACFCA622751623C00D876B2 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA612751623C00D876B2 /* GroupViewController.swift */; };
+		FACFCA642751652B00D876B2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA632751652B00D876B2 /* DetailViewController.swift */; };
+		FACFCA682751666600D876B2 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA662751666600D876B2 /* GalleryTableViewCell.swift */; };
+		FACFCA692751666600D876B2 /* GalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA672751666600D876B2 /* GalleryTableViewCell.xib */; };
+		FACFCA6E2751669300D876B2 /* AZListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA6C2751669300D876B2 /* AZListTableViewCell.swift */; };
+		FACFCA6F2751669300D876B2 /* AZListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA6D2751669300D876B2 /* AZListTableViewCell.xib */; };
+		FACFCA72275166A200D876B2 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA70275166A200D876B2 /* GroupTableViewCell.swift */; };
+		FACFCA73275166A200D876B2 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA71275166A200D876B2 /* GroupTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FACFCA1D2750E0CE00D876B2 /* groupAndAZlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groupAndAZlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFCA202750E0CE00D876B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FACFCA242750E0CE00D876B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FACFCA272750E0CE00D876B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACFCA292750E0D400D876B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACFCA2C2750E0D400D876B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +59,17 @@
 		FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCollectionViewCell.swift; sourceTree = "<group>"; };
 		FACFCA5527511E5500D876B2 /* NasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewController.swift; sourceTree = "<group>"; };
 		FACFCA572751255C00D876B2 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
+		FACFCA5927515C8D00D876B2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FACFCA5D2751621100D876B2 /* AZListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZListViewController.swift; sourceTree = "<group>"; };
+		FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		FACFCA612751623C00D876B2 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		FACFCA632751652B00D876B2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FACFCA662751666600D876B2 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
+		FACFCA672751666600D876B2 /* GalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryTableViewCell.xib; sourceTree = "<group>"; };
+		FACFCA6C2751669300D876B2 /* AZListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZListTableViewCell.swift; sourceTree = "<group>"; };
+		FACFCA6D2751669300D876B2 /* AZListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AZListTableViewCell.xib; sourceTree = "<group>"; };
+		FACFCA70275166A200D876B2 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		FACFCA71275166A200D876B2 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +140,12 @@
 		FACFCA362750E0FF00D876B2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FACFCA242750E0CE00D876B2 /* ViewController.swift */,
 				FACFCA5527511E5500D876B2 /* NasaViewController.swift */,
+				FACFCA5927515C8D00D876B2 /* MainViewController.swift */,
+				FACFCA5D2751621100D876B2 /* AZListViewController.swift */,
+				FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */,
+				FACFCA612751623C00D876B2 /* GroupViewController.swift */,
+				FACFCA632751652B00D876B2 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -145,6 +169,7 @@
 		FACFCA392750E14300D876B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FACFCA652751663F00D876B2 /* Cell */,
 				FACFCA262750E0CE00D876B2 /* Main.storyboard */,
 				FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */,
 			);
@@ -185,6 +210,19 @@
 				FACFCA5127510D5C00D876B2 /* Bindable.swift */,
 			);
 			path = Bind;
+			sourceTree = "<group>";
+		};
+		FACFCA652751663F00D876B2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA662751666600D876B2 /* GalleryTableViewCell.swift */,
+				FACFCA672751666600D876B2 /* GalleryTableViewCell.xib */,
+				FACFCA6C2751669300D876B2 /* AZListTableViewCell.swift */,
+				FACFCA6D2751669300D876B2 /* AZListTableViewCell.xib */,
+				FACFCA70275166A200D876B2 /* GroupTableViewCell.swift */,
+				FACFCA71275166A200D876B2 /* GroupTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +287,10 @@
 				FACFCA432750E57300D876B2 /* Colors.xcassets in Resources */,
 				FACFCA452750E5CC00D876B2 /* UIContent.xcassets in Resources */,
 				FACFCA2A2750E0D400D876B2 /* Assets.xcassets in Resources */,
+				FACFCA692751666600D876B2 /* GalleryTableViewCell.xib in Resources */,
 				FACFCA282750E0CE00D876B2 /* Main.storyboard in Resources */,
+				FACFCA6F2751669300D876B2 /* AZListTableViewCell.xib in Resources */,
+				FACFCA73275166A200D876B2 /* GroupTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,16 +301,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACFCA72275166A200D876B2 /* GroupTableViewCell.swift in Sources */,
+				FACFCA622751623C00D876B2 /* GroupViewController.swift in Sources */,
 				FACFCA412750E1ED00D876B2 /* Model.swift in Sources */,
+				FACFCA6E2751669300D876B2 /* AZListTableViewCell.swift in Sources */,
+				FACFCA602751622B00D876B2 /* GalleryViewController.swift in Sources */,
 				FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */,
-				FACFCA252750E0CE00D876B2 /* ViewController.swift in Sources */,
 				FACFCA3D2750E1AE00D876B2 /* JsonParsing.swift in Sources */,
 				FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */,
+				FACFCA682751666600D876B2 /* GalleryTableViewCell.swift in Sources */,
 				FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */,
 				FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */,
 				FACFCA3B2750E18000D876B2 /* String.swift in Sources */,
+				FACFCA642751652B00D876B2 /* DetailViewController.swift in Sources */,
 				FACFCA482750EED300D876B2 /* UIColor.swift in Sources */,
+				FACFCA5A27515C8E00D876B2 /* MainViewController.swift in Sources */,
 				FACFCA582751255C00D876B2 /* CarouselFlowLayout.swift in Sources */,
+				FACFCA5E2751621100D876B2 /* AZListViewController.swift in Sources */,
 				FACFCA3F2750E1CB00D876B2 /* ViewModel.swift in Sources */,
 				FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */,
 				FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */,
