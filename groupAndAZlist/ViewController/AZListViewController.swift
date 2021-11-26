@@ -14,11 +14,14 @@ class AZListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        cellRegister()
     }
     
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
+    }
+    
+    private func cellRegister() {
+        tableView.register(UINib(nibName: String.CellIdentifire.azlistCell, bundle: nil), forCellReuseIdentifier: String.CellIdentifire.azlistCell)
     }
     
 

@@ -14,12 +14,15 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        cellRegister()
 
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
     }
     
+    private func cellRegister() {
+        tableView.register(UINib(nibName: String.CellIdentifire.galleryCell, bundle: nil), forCellReuseIdentifier: String.CellIdentifire.galleryCell)
+    }
 }
