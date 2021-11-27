@@ -14,7 +14,7 @@ class AZListTableViewCell: UITableViewCell {
     @IBOutlet weak var azImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        titleLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

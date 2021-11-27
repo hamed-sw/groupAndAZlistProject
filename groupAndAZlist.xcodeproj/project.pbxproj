@@ -36,6 +36,9 @@
 		FACFCA6F2751669300D876B2 /* AZListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA6D2751669300D876B2 /* AZListTableViewCell.xib */; };
 		FACFCA72275166A200D876B2 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA70275166A200D876B2 /* GroupTableViewCell.swift */; };
 		FACFCA73275166A200D876B2 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA71275166A200D876B2 /* GroupTableViewCell.xib */; };
+		FACFCA752752A0D600D876B2 /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA742752A0D600D876B2 /* JsonModel.swift */; };
+		FACFCA772752B81D00D876B2 /* AZLIstAndGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */; };
+		FACFCA792752B8D200D876B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA782752B8D200D876B2 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		FACFCA6D2751669300D876B2 /* AZListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AZListTableViewCell.xib; sourceTree = "<group>"; };
 		FACFCA70275166A200D876B2 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		FACFCA71275166A200D876B2 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		FACFCA742752A0D600D876B2 /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
+		FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZLIstAndGroupViewModel.swift; sourceTree = "<group>"; };
+		FACFCA782752B8D200D876B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				FACFCA402750E1ED00D876B2 /* Model.swift */,
+				FACFCA742752A0D600D876B2 /* JsonModel.swift */,
+				FACFCA782752B8D200D876B2 /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				FACFCA3E2750E1CB00D876B2 /* ViewModel.swift */,
+				FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,11 +315,14 @@
 				FACFCA412750E1ED00D876B2 /* Model.swift in Sources */,
 				FACFCA6E2751669300D876B2 /* AZListTableViewCell.swift in Sources */,
 				FACFCA602751622B00D876B2 /* GalleryViewController.swift in Sources */,
+				FACFCA792752B8D200D876B2 /* DataModel.swift in Sources */,
 				FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */,
 				FACFCA3D2750E1AE00D876B2 /* JsonParsing.swift in Sources */,
 				FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */,
 				FACFCA682751666600D876B2 /* GalleryTableViewCell.swift in Sources */,
+				FACFCA752752A0D600D876B2 /* JsonModel.swift in Sources */,
 				FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */,
+				FACFCA772752B81D00D876B2 /* AZLIstAndGroupViewModel.swift in Sources */,
 				FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */,
 				FACFCA3B2750E18000D876B2 /* String.swift in Sources */,
 				FACFCA642751652B00D876B2 /* DetailViewController.swift in Sources */,

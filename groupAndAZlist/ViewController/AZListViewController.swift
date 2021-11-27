@@ -12,13 +12,26 @@ class AZListViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
+    lazy var viewModel = AZlistAndGroupViewModel()
+
+    var thesegment = MainViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.tableView = self.tableView
+        jsonUpdate()
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
+        print(viewModel.nasaDara.count)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         segmentOn()
+
+    }
+    func jsonUpdate() {
+        viewModel.getData()
     }
   
     
@@ -51,12 +64,13 @@ class AZListViewController: UIViewController {
 extension AZListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return viewModel.nasaDara.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.azlistCell, for: indexPath) as? AZListTableViewCell else { fatalError()}
-        cell.titleLabel.text = "azlist"
+        //cell.azImage.image = UIImage(named: viewModel.nasaDara[indexPath.row].url)
+        cell.titleLabel.text = viewModel.nasaDara[indexPath.row].title
         return cell
     }
     

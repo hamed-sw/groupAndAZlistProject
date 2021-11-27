@@ -14,16 +14,32 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
-    
+    var thesegment = MainViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        segment.selectedSegmentIndex = 0
+        //thesegment.segmentIs = segment
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
         segmentOn()
+        navigationConfig()
 
     }
 
+    func navigationConfig() {
+        let appearance = UIToolbarAppearance()
+        toolbar.tintColor = UIColor.AppThems.navBarTint
+        toolbar.backgroundColor = UIColor.AppThems.toolBar
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.AppThems.toolBar
+        UIToolbar.appearance().standardAppearance = appearance
+        UIToolbar.appearance().scrollEdgeAppearance = appearance
+        
+        //toolbar.standardAppearance.backgroundColor = UIColor.AppThems.toolBar
+        //toolbar.tintColor = .red
+       // toolbar.backgroundColor = UIColor.AppThems.toolBar
+    }
 
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         

@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var groupView: UIView!
     @IBOutlet weak var aZlistIpadVIew: UIView!
     @IBOutlet weak var groupIpadView: UIView!
+    var segmentIs = UISegmentedControl()
     
     let one:Int = 1
     let zero:Int = 0
@@ -45,6 +46,7 @@ class MainViewController: UIViewController {
             configerUIView(first: zero, second: one, third: zero, fourth: zero, fifth: zero)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
             configerUIView(first: zero, second: zero, third: zero, fourth: one, fifth: zero)
+            segmentIs.selectedSegmentIndex = 1
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
     }
@@ -58,6 +60,7 @@ class MainViewController: UIViewController {
             configerUIView(first: zero, second: zero, third: one, fourth: zero, fifth: zero)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
             configerUIView(first: zero, second: zero, third: zero, fourth: zero, fifth: one)
+            segmentIs.selectedSegmentIndex = 2
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
 
@@ -82,6 +85,7 @@ class MainViewController: UIViewController {
             configerUIView(first: zero, second: zero, third: one, fourth: zero, fifth: zero)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
             configerUIView(first: zero, second: zero, third: zero, fourth: zero, fifth: one)
+            segmentIs.selectedSegmentIndex = 2
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
     }
@@ -104,6 +108,7 @@ class MainViewController: UIViewController {
             configerUIView(first: zero, second: one, third: zero, fourth: zero, fifth: zero)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
             configerUIView(first: zero, second: zero, third: zero, fourth: one, fifth: zero)
+            segmentIs.selectedSegmentIndex = 1
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
     }

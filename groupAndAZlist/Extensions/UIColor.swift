@@ -15,5 +15,6 @@ extension UIColor {
         //NavBar
         static var navBar: UIColor { return UIColor(named: "NavBar") ?? UIColor()}
         static var navBarTint: UIColor { return UIColor(named: "NavBarTint") ?? UIColor()}
+        static var toolBar: UIColor { return UIColor(named: "ToolBar") ?? UIColor()}
     }
 }

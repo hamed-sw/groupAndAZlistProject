@@ -12,15 +12,23 @@ class GroupViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
+    var thesegment = MainViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //segment.selectedSegmentIndex = 2
+        //thesegment.segmentIs = segment
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
-        segmentOn()
     }
  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        segmentOn()
+
+    }
+  
 
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
