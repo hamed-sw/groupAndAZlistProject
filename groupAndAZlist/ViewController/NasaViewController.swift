@@ -18,10 +18,26 @@ class NasaViewController: UIViewController {
         self.collectionView.dataSource = self
         setNasaViewModel()
         setcoustomlayout()
-        
+        enableNavigation()
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideTheNavigationBar()
+    }
+    func enableNavigation() {
+        NotificationCenter.default.addObserver(self, selector: #selector(enable), name: .enableNavigation, object: nil)
+    }
+    @objc func enable() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
+    func hideTheNavigationBar() {
+        NotificationCenter.default.addObserver(self, selector: #selector(tapped), name: .navigationHide, object: nil)
+    }
+    @objc func tapped() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     private func setNasaViewModel() {
         viewModel.items.bind { [weak self] (items)in
             DispatchQueue.main.async {

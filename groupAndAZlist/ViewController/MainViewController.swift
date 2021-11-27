@@ -26,13 +26,94 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        galleryToAZlistView()
+        galleryToGroupView()
+        aZlistToGallery()
+        azListToGroupView()
+        groupToGalleryview()
+        groupToAzlistview()
         
+    }
+    /////////////////
+    private func galleryToAZlistView() {
+        NotificationCenter.default.addObserver(self, selector: #selector(galleryToAz), name: .galleryToAZListView, object: nil)
+        
+    }
+    @objc func galleryToAz() {
+        NotificationCenter.default.post(name: .segmentAZlsitOn, object: nil)
+        if (UIDevice.current.userInterfaceIdiom == .phone) {
+            configerUIView(first: zero, second: one, third: zero, fourth: zero, fifth: zero)
+        } else if (UIDevice.current.userInterfaceIdiom == .pad) {
+            configerUIView(first: zero, second: zero, third: zero, fourth: one, fifth: zero)
+            NotificationCenter.default.post(name: .navigationHide, object: nil)
+        }
+    }
+    ///////////////////
+    private func galleryToGroupView() {
+        NotificationCenter.default.addObserver(self, selector: #selector(gallerytogroup), name: .galleryToGroupView, object: nil)
+    }
+    @objc func gallerytogroup() {
+        NotificationCenter.default.post(name: .segmentGroupOn, object: nil)
+        if (UIDevice.current.userInterfaceIdiom == .phone) {
+            configerUIView(first: zero, second: zero, third: one, fourth: zero, fifth: zero)
+        } else if (UIDevice.current.userInterfaceIdiom == .pad) {
+            configerUIView(first: zero, second: zero, third: zero, fourth: zero, fifth: one)
+            NotificationCenter.default.post(name: .navigationHide, object: nil)
+        }
+
+    }
+    ////////////////////////////
+    private func aZlistToGallery() {
+        NotificationCenter.default.addObserver(self, selector: #selector(azlistToGaller), name: .aZlistToGalleryview, object: nil)
+    }
+    @objc func azlistToGaller() {
+        configerUIView(first: one, second: zero, third: zero, fourth: zero, fifth: zero)
+        NotificationCenter.default.post(name: .segmentGalleryOn, object: nil)
+        NotificationCenter.default.post(name: .enableNavigation, object: nil)
+        
+    }
+    ////////////////
+    private func azListToGroupView() {
+        NotificationCenter.default.addObserver(self, selector: #selector(azListToGroup), name: .aZlistToGroupview, object: nil)
+    }
+    @objc func azListToGroup() {
+        NotificationCenter.default.post(name: .segmentGroupOn, object: nil)
+        if (UIDevice.current.userInterfaceIdiom == .phone) {
+            configerUIView(first: zero, second: zero, third: one, fourth: zero, fifth: zero)
+        } else if (UIDevice.current.userInterfaceIdiom == .pad) {
+            configerUIView(first: zero, second: zero, third: zero, fourth: zero, fifth: one)
+            NotificationCenter.default.post(name: .navigationHide, object: nil)
+        }
+    }
+/////////////////////////
+    private func groupToGalleryview() {
+        NotificationCenter.default.addObserver(self, selector: #selector(groupToGallery), name: .groupToGalleryView, object: nil)
+    }
+    @objc func groupToGallery() {
+       configerUIView(first: one, second: zero, third: zero, fourth: zero, fifth: zero)
+        NotificationCenter.default.post(name: .segmentGalleryOn, object: nil)
+        NotificationCenter.default.post(name: .enableNavigation, object: nil)
+    }
+///////////////////
+    private func groupToAzlistview() {
+        NotificationCenter.default.addObserver(self, selector: #selector(groupToAzlist), name: .groupToAZlistView, object: nil)
+    }
+    @objc func groupToAzlist() {
+        NotificationCenter.default.post(name: .segmentAZlsitOn, object: nil)
+        if (UIDevice.current.userInterfaceIdiom == .phone) {
+            configerUIView(first: zero, second: one, third: zero, fourth: zero, fifth: zero)
+        } else if (UIDevice.current.userInterfaceIdiom == .pad) {
+            configerUIView(first: zero, second: zero, third: zero, fourth: one, fifth: zero)
+            NotificationCenter.default.post(name: .navigationHide, object: nil)
+        }
     }
     
 
     
     func reload() {
         configerUIView(first:one, second: zero, third: zero, fourth: zero, fifth: zero)
+        NotificationCenter.default.post(name: .segmentGalleryOn, object: nil)
+
     }
     
     func configerUIView(first: Int, second: Int, third: Int, fourth: Int, fifth: Int) {

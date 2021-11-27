@@ -297,7 +297,7 @@
         <!--Split View Controller-->
         <scene sceneID="MQv-Et-pwm">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="125-PC-UON" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" presentsWithGesture="NO" id="125-PC-UON" sceneMemberID="viewController">
                     <connections>
                         <segue destination="DNN-Ar-Qrh" kind="relationship" relationship="masterViewController" id="tlr-B7-8gn"/>
                         <segue destination="DKH-fB-c64" kind="relationship" relationship="detailViewController" id="V3O-Ed-WB2"/>
@@ -341,7 +341,7 @@
         <!--Split View Controller-->
         <scene sceneID="6jz-fY-L0e">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="fyu-kx-UHE" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" presentsWithGesture="NO" id="fyu-kx-UHE" sceneMemberID="viewController">
                     <connections>
                         <segue destination="J84-KX-2Bk" kind="relationship" relationship="masterViewController" id="E8Y-YK-TDz"/>
                         <segue destination="DKH-fB-c64" kind="relationship" relationship="detailViewController" id="G33-4g-ZuP"/>
@@ -473,9 +473,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V3O-Ed-WB2"/>
+        <segue reference="G33-4g-ZuP"/>
         <segue reference="gH5-Hw-IYl"/>
-        <segue reference="DZz-xi-LQy"/>
+        <segue reference="W9j-wg-g2Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="213" height="339"/>

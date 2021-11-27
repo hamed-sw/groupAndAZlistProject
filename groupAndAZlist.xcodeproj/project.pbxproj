@@ -142,8 +142,8 @@
 			children = (
 				FACFCA5527511E5500D876B2 /* NasaViewController.swift */,
 				FACFCA5927515C8D00D876B2 /* MainViewController.swift */,
-				FACFCA5D2751621100D876B2 /* AZListViewController.swift */,
 				FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */,
+				FACFCA5D2751621100D876B2 /* AZListViewController.swift */,
 				FACFCA612751623C00D876B2 /* GroupViewController.swift */,
 				FACFCA632751652B00D876B2 /* DetailViewController.swift */,
 			);
