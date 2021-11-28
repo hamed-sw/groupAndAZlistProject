@@ -16,3 +16,7 @@ struct DataModel {
     var title: String
     var url: String
 }
+
+struct AZlistData {
+    
+}

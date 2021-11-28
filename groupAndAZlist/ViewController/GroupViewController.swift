@@ -24,6 +24,7 @@ class GroupViewController: UIViewController {
         viewModel.activeIndacater = self.activeIndicator
         startActivindicator()
         viewModel.tableView = self.tableView
+        viewModel.getdatafromDatabase()
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,10 +36,25 @@ class GroupViewController: UIViewController {
         updateViewAndIndicator()
         jsonUpdate()
         segmentOn()
+        navigationConfig()
 
     }
     func jsonUpdate() {
         viewModel.getData()
+    }
+    
+    func navigationConfig() {
+        let appearance = UIToolbarAppearance()
+        toolBar.tintColor = UIColor.AppThems.navBarTint
+        toolBar.backgroundColor = UIColor.AppThems.toolBar
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.AppThems.toolBar
+        UIToolbar.appearance().standardAppearance = appearance
+        UIToolbar.appearance().scrollEdgeAppearance = appearance
+        
+        //toolbar.standardAppearance.backgroundColor = UIColor.AppThems.toolBar
+        //toolbar.tintColor = .red
+       // toolbar.backgroundColor = UIColor.AppThems.toolBar
     }
     func updateViewAndIndicator() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {

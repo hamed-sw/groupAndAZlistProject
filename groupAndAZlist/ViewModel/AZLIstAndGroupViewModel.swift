@@ -13,9 +13,11 @@ class AZlistAndGroupViewModel {
     var nasaDara = [DataModel]()
     var activeIndacater = UIActivityIndicatorView()
     var indicatorUIView = UIView()
-    var azLisArray = [String:DataModel]()
-  //  let dddd = ["Hamed","Tamkin","Amta","Alyas","Ishaaq","Naved","Hamed","Ishaaq","Karima","Tamkin","Rafi","Bezhan","Haroon","","",""]
-    
+    var azLisDic = [String:[DataModel]]()
+    var userSection = [String]()
+   // var nasaArray = []()
+    let db = Database()
+
     func getData() {
         JsonParsing.apiCall { [weak self] data in
             switch data {
@@ -28,14 +30,14 @@ class AZlistAndGroupViewModel {
                                                                 title: $0.title ?? "",
                                                                 url: $0.url ?? "")
                     
+                    
                 })
+                
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                     self?.activeIndacater.stopAnimating()
                     self?.activeIndacater.hidesWhenStopped = true
                     self?.indicatorUIView.isHidden = true
-
- 
                 }
              
             case .failure(let error):
@@ -44,15 +46,34 @@ class AZlistAndGroupViewModel {
         }
     }
     
+    func getdatafromDatabase() {
+        for user in db.getData() {
+            nasaDara.append(DataModel(date: user.date, explanation: user.explanation, hdurl: user.hdurl, mediaType: user.mediaType, serviceVersion: user.serviceVersion, title: user.title, url: user.url))
+        }
+    }
+    
     func aZlistModel() {
         
-        for user in nasaDara {
+        for user in db.getData() {
+//            var key:String
+//            for n in user.title {
+//                if n == String{
+//                    
+//                }
+//            }
             let key = "\(user.title[user.title.startIndex])".uppercased()
-            if var userValue = self.azLisArray[key] {
-                print(userValue)
-                print(azLisArray[key])
-                
+           // print(user)
+         //  print(key)
+            if var userValue = self.azLisDic[key] {
+                userValue.append(user)
+                //print(userValue)
+                azLisDic[key] = userValue
+
+            }else {
+                self.azLisDic[key] = [user]
+               // print(azLisDic)
             }
+            self.userSection = [String](self.azLisDic.keys).sorted()
         }
         
     }

@@ -60,7 +60,7 @@
                                                 <constraint firstItem="c2H-9s-h58" firstAttribute="top" secondItem="0EU-Ap-UQr" secondAttribute="bottom" constant="12" id="iUh-DQ-VGz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="190" height="225"/>
                                         <connections>
@@ -196,7 +196,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-4b-xHi">
                                 <rect key="frame" x="0.0" y="88" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableFooterView" contentMode="redraw" id="AFi-Z0-0Xi">
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="Ihz-HM-NGN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -238,7 +238,6 @@
                     <connections>
                         <outlet property="activeIndicatior" destination="tbQ-1W-BkK" id="ugQ-yx-asK"/>
                         <outlet property="activeView" destination="z6A-gg-tRn" id="EG4-ri-Y6h"/>
-                        <outlet property="searchBar" destination="AFi-Z0-0Xi" id="J72-X7-jSQ"/>
                         <outlet property="segment" destination="OJK-vk-N66" id="Qu9-Je-lEV"/>
                         <outlet property="tableView" destination="f2U-4b-xHi" id="Lcl-My-gCR"/>
                         <outlet property="toolbar" destination="cEZ-WA-rGs" id="XJT-Sc-Slq"/>
@@ -517,6 +516,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -16,15 +16,20 @@ class AZListViewController: UIViewController {
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
     lazy var viewModel = AZlistAndGroupViewModel()
+    let db = Database()
+
 
     var thesegment = MainViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        db.dbMethod()
+        print(fileUrl)
         viewModel.indicatorUIView = self.activeView
         viewModel.activeIndacater = self.activeIndicatior
         viewModel.startActiveIndicater()
         viewModel.tableView = self.tableView
+        viewModel.getdatafromDatabase()
         jsonUpdate()
         cellRegister()
         tableView.delegate = self
@@ -35,10 +40,24 @@ class AZListViewController: UIViewController {
         updateViewAndIndicator()
         segmentOn()
         viewModel.aZlistModel()
+        navigationConfig()
 
     }
     func jsonUpdate() {
         viewModel.getData()
+    }
+    func navigationConfig() {
+        let appearance = UIToolbarAppearance()
+        toolbar.tintColor = UIColor.AppThems.navBarTint
+        toolbar.backgroundColor = UIColor.AppThems.toolBar
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.AppThems.toolBar
+        UIToolbar.appearance().standardAppearance = appearance
+        UIToolbar.appearance().scrollEdgeAppearance = appearance
+        
+        //toolbar.standardAppearance.backgroundColor = UIColor.AppThems.toolBar
+        //toolbar.tintColor = .red
+       // toolbar.backgroundColor = UIColor.AppThems.toolBar
     }
   
     func updateViewAndIndicator() {
@@ -77,55 +96,54 @@ class AZListViewController: UIViewController {
 
 extension AZListViewController: UITableViewDelegate, UITableViewDataSource {
     
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        view.tintColor = UIColor(red: 238/255, green: 236/255, blue: 201/255, alpha: 1)
-//
-//        let header = view as! UITableViewHeaderFooterView
-//        header.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: .light)
-//        header.textLabel?.textColor = UIColor.black
-//
-//    }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor(red: 238/255, green: 236/255, blue: 201/255, alpha: 1)
+
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: .light)
+        header.textLabel?.textColor = UIColor.black
+
+    }
     
     
     
-//    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-//        if isActive {
-//        return viewModel.userSections
-//        }else {
-//            return nil
-//        }
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        if isActive {
-//            return viewModel.userSections.count
-//        } else {
-//            return 1
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if isActive {
-//        return viewModel.userSections[section].uppercased()
-//        }
-//        else {
-//            return nil
-//        }
-//    }
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+
+        return viewModel.userSection
+        
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.userSection.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return viewModel.userSection[section].uppercased()
+    }
+    
+  
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.nasaDara.count
+        let userKey = viewModel.userSection[section]
+        if let user = viewModel.azLisDic[userKey] {
+            return user.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.azlistCell, for: indexPath) as? AZListTableViewCell else { fatalError()}
-        let data = viewModel.nasaDara[indexPath.row]
-        //cell.azImage.image = UIImage(named: viewModel.nasaDara[indexPath.row].url)
-        
-       // cell.titleLabel.text = viewModel.nasaDara[indexPath.row].title
-        cell.configar(data: data)
+        let userKey = viewModel.userSection[indexPath.section]
+        if let user = viewModel.azLisDic[userKey.uppercased()] {
+            let theuser = user[indexPath.row]
+            cell.configar(data: theuser)
+        }
+       // let datas = viewModel.nasaDara[indexPath.row]
+
+      //  cell.configar(data: datas)
         return cell
     }
     

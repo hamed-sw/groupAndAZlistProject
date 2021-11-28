@@ -42,6 +42,10 @@
 		FACFCA792752B8D200D876B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA782752B8D200D876B2 /* DataModel.swift */; };
 		FACFCA7B275368B400D876B2 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA7A275368B400D876B2 /* ImageDownload.swift */; };
 		FACFCA7D2753BBF500D876B2 /* AZlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */; };
+		FACFCA802753E60A00D876B2 /* ConnectionDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA7F2753E60A00D876B2 /* ConnectionDB.swift */; };
+		FACFCA822753E61800D876B2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA812753E61800D876B2 /* Database.swift */; };
+		FACFCA842753E7C600D876B2 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA832753E7C600D876B2 /* model.swift */; };
+		FACFCA8627540AAD00D876B2 /* nasaDatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		FACFCA782752B8D200D876B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		FACFCA7A275368B400D876B2 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDownload.swift; path = groupAndAZlist/Model/ImageDownload.swift; sourceTree = SOURCE_ROOT; };
 		FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZlistViewModel.swift; sourceTree = "<group>"; };
+		FACFCA7F2753E60A00D876B2 /* ConnectionDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDB.swift; sourceTree = "<group>"; };
+		FACFCA812753E61800D876B2 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		FACFCA832753E7C600D876B2 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nasaDatabase.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +112,6 @@
 				2FDA7B85AAB82534F366977E /* Pods-groupAndAZlist.debug.xcconfig */,
 				35393AACE25C86EF8CF43A8A /* Pods-groupAndAZlist.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,9 +144,10 @@
 		FACFCA1F2750E0CE00D876B2 /* groupAndAZlist */ = {
 			isa = PBXGroup;
 			children = (
-				FACFCA5027510D3F00D876B2 /* Bind */,
 				FACFCA202750E0CE00D876B2 /* AppDelegate.swift */,
 				FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */,
+				FACFCA5027510D3F00D876B2 /* Bind */,
+				FACFCA7E2753E5EC00D876B2 /* DB */,
 				FACFCA462750EEB200D876B2 /* Extensions */,
 				FACFCA342750E0E900D876B2 /* Model */,
 				FACFCA392750E14300D876B2 /* View */,
@@ -265,6 +273,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		FACFCA7E2753E5EC00D876B2 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */,
+				FACFCA7F2753E60A00D876B2 /* ConnectionDB.swift */,
+				FACFCA812753E61800D876B2 /* Database.swift */,
+				FACFCA832753E7C600D876B2 /* model.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,6 +350,7 @@
 				FACFCA2A2750E0D400D876B2 /* Assets.xcassets in Resources */,
 				FACFCA692751666600D876B2 /* GalleryTableViewCell.xib in Resources */,
 				FACFCA282750E0CE00D876B2 /* Main.storyboard in Resources */,
+				FACFCA8627540AAD00D876B2 /* nasaDatabase.sqlite in Resources */,
 				FACFCA6F2751669300D876B2 /* AZListTableViewCell.xib in Resources */,
 				FACFCA73275166A200D876B2 /* GroupTableViewCell.xib in Resources */,
 			);
@@ -398,6 +418,7 @@
 				FACFCA682751666600D876B2 /* GalleryTableViewCell.swift in Sources */,
 				FACFCA752752A0D600D876B2 /* JsonModel.swift in Sources */,
 				FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */,
+				FACFCA802753E60A00D876B2 /* ConnectionDB.swift in Sources */,
 				FACFCA772752B81D00D876B2 /* AZLIstAndGroupViewModel.swift in Sources */,
 				FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */,
 				FACFCA3B2750E18000D876B2 /* String.swift in Sources */,
@@ -409,7 +430,9 @@
 				FACFCA3F2750E1CB00D876B2 /* ViewModel.swift in Sources */,
 				FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */,
 				FACFCA7D2753BBF500D876B2 /* AZlistViewModel.swift in Sources */,
+				FACFCA842753E7C600D876B2 /* model.swift in Sources */,
 				FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */,
+				FACFCA822753E61800D876B2 /* Database.swift in Sources */,
 				FACFCA4D2751084100D876B2 /* AppNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
