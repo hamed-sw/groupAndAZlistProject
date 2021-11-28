@@ -11,6 +11,7 @@ class GalleryViewController: UIViewController {
   
     
 
+    @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!

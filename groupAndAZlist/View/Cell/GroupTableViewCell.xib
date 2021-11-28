@@ -12,23 +12,19 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupTableViewCell" rowHeight="116" id="KGk-i7-Jjw" customClass="GroupTableViewCell" customModule="groupAndAZlist" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="364" height="116"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="364" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fIt-SX-dZ5">
-                        <rect key="frame" x="8" y="0.0" width="87" height="113"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planetary" translatesAutoresizingMaskIntoConstraints="NO" id="fIt-SX-dZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="108"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="113" id="nQa-kl-ujI"/>
-                            <constraint firstAttribute="width" constant="87" id="ufx-LT-O1z"/>
+                            <constraint firstAttribute="height" constant="108" id="nQa-kl-ujI"/>
+                            <constraint firstAttribute="width" constant="100" id="ufx-LT-O1z"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbT-Fi-skb">
-                        <rect key="frame" x="103" y="41" width="256" height="31"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="31" id="GHd-TQ-Zoh"/>
-                            <constraint firstAttribute="width" constant="256" id="iI2-kc-zwQ"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbT-Fi-skb">
+                        <rect key="frame" x="108" y="41" width="251" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,11 +32,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="fIt-SX-dZ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JN4-4a-KGk"/>
-                    <constraint firstAttribute="bottom" secondItem="hbT-Fi-skb" secondAttribute="bottom" constant="44" id="kVU-JL-vYt"/>
-                    <constraint firstAttribute="trailing" secondItem="hbT-Fi-skb" secondAttribute="trailing" constant="5" id="mcj-UU-YQg"/>
-                    <constraint firstItem="hbT-Fi-skb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="tXW-sV-tdg"/>
-                    <constraint firstItem="fIt-SX-dZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="v1L-2i-9wI"/>
-                    <constraint firstAttribute="bottom" secondItem="fIt-SX-dZ5" secondAttribute="bottom" id="wQs-iW-xa9"/>
+                    <constraint firstAttribute="trailing" secondItem="hbT-Fi-skb" secondAttribute="trailing" constant="5" id="NgH-sd-zN2"/>
+                    <constraint firstItem="hbT-Fi-skb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="aSA-qe-NnS"/>
+                    <constraint firstItem="hbT-Fi-skb" firstAttribute="leading" secondItem="fIt-SX-dZ5" secondAttribute="trailing" constant="8" id="odZ-pz-vAy"/>
+                    <constraint firstItem="fIt-SX-dZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="v1L-2i-9wI"/>
+                    <constraint firstAttribute="bottom" secondItem="fIt-SX-dZ5" secondAttribute="bottom" constant="8" id="wQs-iW-xa9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -51,4 +47,7 @@
             <point key="canvasLocation" x="168.11594202898553" y="135.9375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="planetary" width="230" height="173"/>
+    </resources>
 </document>

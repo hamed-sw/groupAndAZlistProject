@@ -8,27 +8,45 @@
 import UIKit
 
 class GroupViewController: UIViewController {
-
+    
+    @IBOutlet weak var activeView: UIView!
+    @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
     var thesegment = MainViewController()
+    lazy var viewModel = AZlistAndGroupViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //segment.selectedSegmentIndex = 2
-        //thesegment.segmentIs = segment
+        viewModel.indicatorUIView = self.activeView
+        viewModel.activeIndacater = self.activeIndicator
+        startActivindicator()
+        viewModel.tableView = self.tableView
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//            self.activeView.isHidden = true
+//            self.activeIndicator.stopAnimating()
+//            self.activeIndicator.hidesWhenStopped = true
+//        }
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        jsonUpdate()
         segmentOn()
 
     }
+    func jsonUpdate() {
+        viewModel.getData()
+    }
   
+   
+    func startActivindicator() {
+        viewModel.startActiveIndicater()
+    }
 
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -57,12 +75,14 @@ class GroupViewController: UIViewController {
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
+        //viewModel.nasaDara.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.groupCell, for: indexPath) as? GroupTableViewCell else { fatalError()}
-        cell.groupLabel.text = "group"
+        cell.groupLabel.text = "one"
+        //viewModel.nasaDara[indexPath.row].title
         return cell
     }
     

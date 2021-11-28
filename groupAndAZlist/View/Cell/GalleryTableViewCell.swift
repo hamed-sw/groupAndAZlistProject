@@ -13,6 +13,7 @@ class GalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var galleryImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        galleryLabel.sizeToFit()
         
     }
 

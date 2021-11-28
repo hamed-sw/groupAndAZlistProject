@@ -16,10 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dv0-m0-c5H">
-                        <rect key="frame" x="8" y="0.0" width="88" height="92"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Dv0-m0-c5H">
+                        <rect key="frame" x="8" y="0.0" width="88" height="87"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="92" id="85X-ze-tdY"/>
+                            <constraint firstAttribute="height" constant="87" id="85X-ze-tdY"/>
                             <constraint firstAttribute="width" constant="88" id="ZVj-BJ-Oft"/>
                         </constraints>
                     </imageView>
@@ -33,10 +33,9 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxp-ul-250">
-                        <rect key="frame" x="104" y="47" width="237" height="34"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxp-ul-250">
+                        <rect key="frame" x="104" y="47" width="237" height="20.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="34" id="Tcx-nv-8qW"/>
                             <constraint firstAttribute="width" constant="237" id="tj3-og-WyT"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,7 +50,7 @@
                     <constraint firstItem="sxp-ul-250" firstAttribute="top" secondItem="u3U-P4-rsQ" secondAttribute="bottom" constant="8" id="UU7-ri-1vE"/>
                     <constraint firstItem="u3U-P4-rsQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XUi-YL-ccy"/>
                     <constraint firstItem="Dv0-m0-c5H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="aE6-ut-P0A"/>
-                    <constraint firstAttribute="bottom" secondItem="Dv0-m0-c5H" secondAttribute="bottom" id="gmX-2W-QC1"/>
+                    <constraint firstAttribute="bottom" secondItem="Dv0-m0-c5H" secondAttribute="bottom" constant="5" id="gmX-2W-QC1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -63,4 +62,7 @@
             <point key="canvasLocation" x="44.20289855072464" y="78.348214285714278"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="launch" width="225" height="224"/>
+    </resources>
 </document>

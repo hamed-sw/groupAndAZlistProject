@@ -9,6 +9,8 @@ import UIKit
 
 class AZListViewController: UIViewController {
 
+    @IBOutlet weak var activeView: UIView!
+    @IBOutlet weak var activeIndicatior: UIActivityIndicatorView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +20,9 @@ class AZListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.indicatorUIView = self.activeView
+        viewModel.activeIndacater = self.activeIndicatior
+        viewModel.startActiveIndicater()
         viewModel.tableView = self.tableView
         jsonUpdate()
         cellRegister()
@@ -69,8 +74,11 @@ extension AZListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.azlistCell, for: indexPath) as? AZListTableViewCell else { fatalError()}
+        let data = viewModel.nasaDara[indexPath.row]
         //cell.azImage.image = UIImage(named: viewModel.nasaDara[indexPath.row].url)
-        cell.titleLabel.text = viewModel.nasaDara[indexPath.row].title
+        
+       // cell.titleLabel.text = viewModel.nasaDara[indexPath.row].title
+        cell.configar(data: data)
         return cell
     }
     

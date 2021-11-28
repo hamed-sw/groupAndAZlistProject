@@ -13,6 +13,7 @@ class GroupTableViewCell: UITableViewCell {
     @IBOutlet weak var groupImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        groupLabel.sizeToFit()
         // Initialization code
     }
 

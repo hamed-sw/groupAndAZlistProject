@@ -11,6 +11,8 @@ class AZlistAndGroupViewModel {
     
     var tableView = UITableView()
     var nasaDara = [DataModel]()
+    var activeIndacater = UIActivityIndicatorView()
+    var indicatorUIView = UIView()
     
     func getData() {
         JsonParsing.apiCall { [weak self] data in
@@ -27,10 +29,33 @@ class AZlistAndGroupViewModel {
                 })
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
+                    self?.activeIndacater.stopAnimating()
+                    self?.activeIndacater.hidesWhenStopped = true
+                    self?.indicatorUIView.isHidden = true
+
+ 
                 }
              
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    
+    func startActiveIndicater() {
+        activeIndacater.startAnimating()
+    }
+    func stopActiveIndicatter() {
+        activeIndacater.stopAnimating()
+    }
+    
+    func imageDisplay(str: String, cell: AZListTableViewCell ) {
+        
+        DownloadImages.imageDownload(string: str) { data in
+            guard let imagedata = UIImage(data: data) else { return}
+            DispatchQueue.main.async {
+                cell.azImage.image = imagedata
             }
         }
     }
