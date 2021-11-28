@@ -28,7 +28,7 @@ extension String {
     
 
     struct APIs {
-        static var nasaAPI: String { return "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2021-08-04"}
+        static var nasaAPI: String { return "https://api.nasa.gov/planetary/apod?api_key=iTpU7k38bGEuZyRNhiTPxmheejpSqg5BQi5rgGQX&start_date=2021-08-04"}
     }
     
 }

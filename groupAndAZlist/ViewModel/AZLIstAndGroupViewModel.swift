@@ -13,6 +13,8 @@ class AZlistAndGroupViewModel {
     var nasaDara = [DataModel]()
     var activeIndacater = UIActivityIndicatorView()
     var indicatorUIView = UIView()
+    var azLisArray = [String:DataModel]()
+  //  let dddd = ["Hamed","Tamkin","Amta","Alyas","Ishaaq","Naved","Hamed","Ishaaq","Karima","Tamkin","Rafi","Bezhan","Haroon","","",""]
     
     func getData() {
         JsonParsing.apiCall { [weak self] data in
@@ -42,6 +44,20 @@ class AZlistAndGroupViewModel {
         }
     }
     
+    func aZlistModel() {
+        
+        for user in nasaDara {
+            let key = "\(user.title[user.title.startIndex])".uppercased()
+            if var userValue = self.azLisArray[key] {
+                print(userValue)
+                print(azLisArray[key])
+                
+            }
+        }
+        
+    }
+    
+    
     
     func startActiveIndicater() {
         activeIndacater.startAnimating()
@@ -50,12 +66,20 @@ class AZlistAndGroupViewModel {
         activeIndacater.stopAnimating()
     }
     
-    func imageDisplay(str: String, cell: AZListTableViewCell ) {
+    func imageDisplayAZlist(str: String, cell: AZListTableViewCell ) {
         
         DownloadImages.imageDownload(string: str) { data in
             guard let imagedata = UIImage(data: data) else { return}
             DispatchQueue.main.async {
                 cell.azImage.image = imagedata
+            }
+        }
+    }
+    func imageDisplayGroup(str: String, cell:GroupTableViewCell) {
+        DownloadImages.imageDownload(string: str) { data in
+            guard let imageData = UIImage(data: data) else { return}
+            DispatchQueue.main.async {
+                cell.groupImage.image = imageData
             }
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821BDE5BA5B3EFC34AFD2C20 /* Pods_groupAndAZlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */; };
 		FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA202750E0CE00D876B2 /* AppDelegate.swift */; };
 		FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */; };
 		FACFCA282750E0CE00D876B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA262750E0CE00D876B2 /* Main.storyboard */; };
@@ -40,9 +41,13 @@
 		FACFCA772752B81D00D876B2 /* AZLIstAndGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */; };
 		FACFCA792752B8D200D876B2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA782752B8D200D876B2 /* DataModel.swift */; };
 		FACFCA7B275368B400D876B2 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA7A275368B400D876B2 /* ImageDownload.swift */; };
+		FACFCA7D2753BBF500D876B2 /* AZlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FDA7B85AAB82534F366977E /* Pods-groupAndAZlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-groupAndAZlist.debug.xcconfig"; path = "Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist.debug.xcconfig"; sourceTree = "<group>"; };
+		35393AACE25C86EF8CF43A8A /* Pods-groupAndAZlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-groupAndAZlist.release.xcconfig"; path = "Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist.release.xcconfig"; sourceTree = "<group>"; };
+		B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_groupAndAZlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFCA1D2750E0CE00D876B2 /* groupAndAZlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groupAndAZlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFCA202750E0CE00D876B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZLIstAndGroupViewModel.swift; sourceTree = "<group>"; };
 		FACFCA782752B8D200D876B2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		FACFCA7A275368B400D876B2 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDownload.swift; path = groupAndAZlist/Model/ImageDownload.swift; sourceTree = SOURCE_ROOT; };
+		FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZlistViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +91,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821BDE5BA5B3EFC34AFD2C20 /* Pods_groupAndAZlist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A08ED687FE3CEDF47D5487E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FDA7B85AAB82534F366977E /* Pods-groupAndAZlist.debug.xcconfig */,
+				35393AACE25C86EF8CF43A8A /* Pods-groupAndAZlist.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6F02C046C1E632D850B7432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FACFCA142750E0CE00D876B2 = {
 			isa = PBXGroup;
 			children = (
 				FACFCA1F2750E0CE00D876B2 /* groupAndAZlist */,
 				FACFCA1E2750E0CE00D876B2 /* Products */,
+				A08ED687FE3CEDF47D5487E1 /* Pods */,
+				D6F02C046C1E632D850B7432 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +171,7 @@
 			children = (
 				FACFCA3E2750E1CB00D876B2 /* ViewModel.swift */,
 				FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */,
+				FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACFCA312750E0D400D876B2 /* Build configuration list for PBXNativeTarget "groupAndAZlist" */;
 			buildPhases = (
+				D0EBDB2B662B4896A0146449 /* [CP] Check Pods Manifest.lock */,
 				FACFCA192750E0CE00D876B2 /* Sources */,
 				FACFCA1A2750E0CE00D876B2 /* Frameworks */,
 				FACFCA1B2750E0CE00D876B2 /* Resources */,
+				A3EAAC15A7B69D8212FCC756 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +338,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A3EAAC15A7B69D8212FCC756 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0EBDB2B662B4896A0146449 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-groupAndAZlist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FACFCA192750E0CE00D876B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -336,6 +408,7 @@
 				FACFCA5E2751621100D876B2 /* AZListViewController.swift in Sources */,
 				FACFCA3F2750E1CB00D876B2 /* ViewModel.swift in Sources */,
 				FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */,
+				FACFCA7D2753BBF500D876B2 /* AZlistViewModel.swift in Sources */,
 				FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */,
 				FACFCA4D2751084100D876B2 /* AppNavigationController.swift in Sources */,
 			);
@@ -481,6 +554,7 @@
 		};
 		FACFCA322750E0D400D876B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FDA7B85AAB82534F366977E /* Pods-groupAndAZlist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -508,6 +582,7 @@
 		};
 		FACFCA332750E0D400D876B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35393AACE25C86EF8CF43A8A /* Pods-groupAndAZlist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

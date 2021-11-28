@@ -27,7 +27,7 @@ class AZListTableViewCell: UITableViewCell {
     func configar(data: DataModel) {
         nameLabel.text = data.mediaType
         titleLabel.text = data.title
-        viewModel.imageDisplay(str: data.url, cell: self)
+        viewModel.imageDisplayAZlist(str: data.url, cell: self)
         
     }
     

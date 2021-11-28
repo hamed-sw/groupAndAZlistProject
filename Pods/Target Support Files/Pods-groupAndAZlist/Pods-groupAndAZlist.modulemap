@@ -1,0 +1,6 @@
+framework module Pods_groupAndAZlist {
+  umbrella header "Pods-groupAndAZlist-umbrella.h"
+
+  export *
+  module * { export * }
+}

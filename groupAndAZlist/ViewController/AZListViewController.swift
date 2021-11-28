@@ -9,6 +9,7 @@ import UIKit
 
 class AZListViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var activeView: UIView!
     @IBOutlet weak var activeIndicatior: UIActivityIndicatorView!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -28,17 +29,25 @@ class AZListViewController: UIViewController {
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
-        print(viewModel.nasaDara.count)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateViewAndIndicator()
         segmentOn()
+        viewModel.aZlistModel()
 
     }
     func jsonUpdate() {
         viewModel.getData()
     }
   
+    func updateViewAndIndicator() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.activeView.isHidden = true
+            self.activeIndicatior.stopAnimating()
+            self.activeIndicatior.hidesWhenStopped = true
+        }
+    }
     
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         
@@ -67,6 +76,44 @@ class AZListViewController: UIViewController {
 }
 
 extension AZListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        view.tintColor = UIColor(red: 238/255, green: 236/255, blue: 201/255, alpha: 1)
+//
+//        let header = view as! UITableViewHeaderFooterView
+//        header.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: .light)
+//        header.textLabel?.textColor = UIColor.black
+//
+//    }
+    
+    
+    
+//    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        if isActive {
+//        return viewModel.userSections
+//        }else {
+//            return nil
+//        }
+//    }
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        if isActive {
+//            return viewModel.userSections.count
+//        } else {
+//            return 1
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if isActive {
+//        return viewModel.userSections[section].uppercased()
+//        }
+//        else {
+//            return nil
+//        }
+//    }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.nasaDara.count

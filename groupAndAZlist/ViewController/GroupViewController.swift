@@ -9,6 +9,7 @@ import UIKit
 
 class GroupViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var activeView: UIView!
     @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -26,21 +27,25 @@ class GroupViewController: UIViewController {
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-//            self.activeView.isHidden = true
-//            self.activeIndicator.stopAnimating()
-//            self.activeIndicator.hidesWhenStopped = true
-//        }
+
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateViewAndIndicator()
         jsonUpdate()
         segmentOn()
 
     }
     func jsonUpdate() {
         viewModel.getData()
+    }
+    func updateViewAndIndicator() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.activeView.isHidden = true
+            self.activeIndicator.stopAnimating()
+            self.activeIndicator.hidesWhenStopped = true
+        }
     }
   
    
@@ -75,14 +80,13 @@ class GroupViewController: UIViewController {
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-        //viewModel.nasaDara.count
+        return viewModel.nasaDara.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.groupCell, for: indexPath) as? GroupTableViewCell else { fatalError()}
-        cell.groupLabel.text = "one"
-        //viewModel.nasaDara[indexPath.row].title
+        let data = viewModel.nasaDara[indexPath.row]
+        cell.config(data: data)
         return cell
     }
     
