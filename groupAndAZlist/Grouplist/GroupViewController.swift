@@ -33,7 +33,7 @@ class GroupViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // this is for space between section
-        tableView.sectionHeaderTopPadding = 3
+        tableView.sectionHeaderTopPadding = .distanceBetweenSectionsIsThree
         
 
     }
@@ -77,13 +77,13 @@ class GroupViewController: UIViewController {
     }
 
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
+        if sender.selectedSegmentIndex == .segmentIndextZero {
             NotificationCenter.default.post(name: .groupToGalleryView, object: nil)
             
-        }else if sender.selectedSegmentIndex == 1 {
+        }else if sender.selectedSegmentIndex == .segmentIndextOne {
             NotificationCenter.default.post(name: .groupToAZlistView, object: nil)
             
-        } else if sender.selectedSegmentIndex == 2 {
+        } else if sender.selectedSegmentIndex == .segmentIndextTwo {
             
         }
     }
@@ -96,7 +96,7 @@ class GroupViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(tapped), name: .segmentGroupOn, object: nil)
     }
     @objc func tapped() {
-        segment.selectedSegmentIndex = 2
+        segment.selectedSegmentIndex = .segmentIndextTwo
     }
     
 }
@@ -111,7 +111,7 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
         if grouViewModel.groupArryData[section].isActive == true {
             return grouViewModel.groupArryData[section].section.count
         } else {
-            return 0
+            return .numberOfRowInSection
         }
     }
     
@@ -149,7 +149,7 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return .headerHieght
     }
     
     
