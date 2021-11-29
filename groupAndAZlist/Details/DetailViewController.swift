@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.getImageforCollection(id: id)
-        print(viewModel.arrayCollection)
         viewModel.getDetail(id: id)
         tableView.delegate = self
         tableView.dataSource = self
@@ -63,14 +62,23 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var cellHeight:CGFloat = CGFloat()
-
-        if indexPath.section == 0 {
-               cellHeight = 500
-           }
-           else  {
-               cellHeight = 300
-           }
-           return cellHeight
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            if indexPath.section == 0 {
+                cellHeight = 400
+            }
+            else  {
+                cellHeight = 300
+            }
+        } else {
+            if indexPath.section == 0 {
+                cellHeight = 500
+            }
+            else  {
+                cellHeight = 300
+            }
+        }
+        
+        return cellHeight
         
     }
     

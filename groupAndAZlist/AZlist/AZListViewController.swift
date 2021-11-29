@@ -155,8 +155,11 @@ extension AZListViewController: UITableViewDelegate, UITableViewDataSource {
             let id = user[indexPath.row].id
             detail.custoninit(id: id)
         }
-       // navigationController?.pushViewController(detail, animated: true)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            navigationController?.pushViewController(detail, animated: true)
+        } else {
         splitViewController?.showDetailViewController(detail, sender: nil)
+        }
     }
     
 }

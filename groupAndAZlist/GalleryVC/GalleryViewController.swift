@@ -107,5 +107,18 @@ extension GalleryViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var cellHeight:CGFloat = CGFloat()
+
+        if UIDevice.current.userInterfaceIdiom == .phone {
+               cellHeight = 300
+           }
+           else  {
+               cellHeight = 400
+           }
+           return cellHeight
+        
+    }
+    
     
 }

@@ -23,7 +23,6 @@ class GroupViewController: UIViewController {
         super.viewDidLoad()
         grouViewModel.fetchData()
        // grouViewModel.groupArryData
-        print(grouViewModel.groupArryData)
         viewModel.indicatorUIView = self.activeView
         viewModel.activeIndacater = self.activeIndicator
         startActivindicator()
@@ -157,8 +156,11 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
         guard let detail = storyBoard.instantiateViewController(withIdentifier: String.StoryBoardIdentity.detailVC) as? DetailViewController else { fatalError()}
         let id = grouViewModel.groupArryData[indexPath.section].section[indexPath.row].id
         detail.custoninit(id: id)
-        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            navigationController?.pushViewController(detail, animated: true)
+        } else {
         splitViewController?.showDetailViewController(detail, sender: nil)
+        }
     }
 
     
