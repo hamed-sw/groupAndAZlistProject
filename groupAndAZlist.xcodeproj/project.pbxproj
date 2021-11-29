@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		821BDE5BA5B3EFC34AFD2C20 /* Pods_groupAndAZlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */; };
+		FAB493002754E7AA00895542 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB492FF2754E7AA00895542 /* CGFloat.swift */; };
 		FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA202750E0CE00D876B2 /* AppDelegate.swift */; };
 		FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */; };
 		FACFCA282750E0CE00D876B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA262750E0CE00D876B2 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		2FDA7B85AAB82534F366977E /* Pods-groupAndAZlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-groupAndAZlist.debug.xcconfig"; path = "Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist.debug.xcconfig"; sourceTree = "<group>"; };
 		35393AACE25C86EF8CF43A8A /* Pods-groupAndAZlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-groupAndAZlist.release.xcconfig"; path = "Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist.release.xcconfig"; sourceTree = "<group>"; };
 		B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_groupAndAZlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB492FF2754E7AA00895542 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		FACFCA1D2750E0CE00D876B2 /* groupAndAZlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groupAndAZlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFCA202750E0CE00D876B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACFCA222750E0CE00D876B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				FACFCA3A2750E17F00D876B2 /* String.swift */,
 				FACFCA492750EEFB00D876B2 /* NotificationName.swift */,
 				FACFCA8F2754BB7600D876B2 /* HeaderAndFooter.swift */,
+				FAB492FF2754E7AA00895542 /* CGFloat.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				FACFCA602751622B00D876B2 /* GalleryViewController.swift in Sources */,
 				FACFCA792752B8D200D876B2 /* DataModel.swift in Sources */,
 				FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */,
+				FAB493002754E7AA00895542 /* CGFloat.swift in Sources */,
 				FACFCA3D2750E1AE00D876B2 /* JsonParsing.swift in Sources */,
 				FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */,
 				FACFCA682751666600D876B2 /* GalleryTableViewCell.swift in Sources */,

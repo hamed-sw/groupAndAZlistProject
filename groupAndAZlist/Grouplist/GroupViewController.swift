@@ -32,6 +32,9 @@ class GroupViewController: UIViewController {
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
+        // this is for space between section
+        tableView.sectionHeaderTopPadding = 3
+        
 
     }
  
