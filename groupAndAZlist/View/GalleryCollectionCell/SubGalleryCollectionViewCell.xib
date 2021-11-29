@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubGalleryCollectionViewCell" id="gTV-IL-0wX" customClass="SubGalleryCollectionViewCell" customModule="groupAndAZlist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nasa_Info" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-yC-wnQ">
+                        <rect key="frame" x="8" y="9" width="186" height="131"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="186" id="71w-JI-52F"/>
+                            <constraint firstAttribute="height" constant="131" id="opu-Up-hni"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOc-Wk-nNA">
+                        <rect key="frame" x="20" y="148" width="160" height="72"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JOc-Wk-nNA" secondAttribute="trailing" constant="20" id="Luy-ml-kdB"/>
+                <constraint firstItem="wBe-yC-wnQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="dOS-aw-vma"/>
+                <constraint firstAttribute="trailing" secondItem="wBe-yC-wnQ" secondAttribute="trailing" constant="6" id="e2x-Tp-Ybc"/>
+                <constraint firstAttribute="bottom" secondItem="JOc-Wk-nNA" secondAttribute="bottom" constant="7" id="h4J-Fs-VM0"/>
+                <constraint firstItem="JOc-Wk-nNA" firstAttribute="top" secondItem="wBe-yC-wnQ" secondAttribute="bottom" constant="8" id="mKk-KY-1ah"/>
+                <constraint firstItem="wBe-yC-wnQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="nAG-FB-qED"/>
+                <constraint firstItem="JOc-Wk-nNA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="vYh-Ml-S6h"/>
+            </constraints>
+            <size key="customSize" width="239" height="227"/>
+            <connections>
+                <outlet property="theImage" destination="wBe-yC-wnQ" id="waU-4k-8Jq"/>
+                <outlet property="theLabel" destination="JOc-Wk-nNA" id="O7z-9U-uNu"/>
+            </connections>
+            <point key="canvasLocation" x="-28.985507246376812" y="114.84375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="nasa_Info" width="259" height="194"/>
+    </resources>
+</document>

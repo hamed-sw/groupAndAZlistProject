@@ -66,5 +66,58 @@ class Database {
         database.close()
         return maindata
     }
+    func getImageData() -> [ImageData] {
+        var maindata = [ImageData]()
+        let database = FMDatabase(url: fileUrl)
+        if  database.open() {
+            do {
+                let rs = try database.executeQuery("SELECT * from NASA_PLANETARY where media_type = 'image'", values: nil)
+                while rs.next() {
+                    let item = ImageData(date: rs.string(forColumn: "date") ?? "",
+                                         explanation: rs.string(forColumn: "explanation") ?? "",
+                                         hdurl: rs.string(forColumn: "hdurl") ?? "",
+                                         media_type: rs.string(forColumn: "media_type") ?? "",
+                                         service_version: rs.string(forColumn: "service_version") ?? "",
+                                         title: rs.string(forColumn: "title") ?? "",
+                                         url: rs.string(forColumn: "url") ?? "")
+                    maindata.append(item)
+                }
+            }catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("sorry unable to open data")
+            return []
+        }
+        database.close()
+        return maindata
+    }
+    func getVideoData() -> [VideoData] {
+        var maindata = [VideoData]()
+        let database = FMDatabase(url: fileUrl)
+        if  database.open() {
+            do {
+                let rs = try database.executeQuery("SELECT * from NASA_PLANETARY where media_type = 'video'", values: nil)
+                while rs.next() {
+                    let item = VideoData(date: rs.string(forColumn: "date") ?? "",
+                                         explanation: rs.string(forColumn: "explanation") ?? "",
+                                         hdurl: rs.string(forColumn: "hdurl") ?? "",
+                                         media_type: rs.string(forColumn: "media_type") ?? "",
+                                         service_version: rs.string(forColumn: "service_version") ?? "",
+                                         title: rs.string(forColumn: "title") ?? "",
+                                         url: rs.string(forColumn: "url") ?? "")
+                    maindata.append(item)
+                }
+            }catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("sorry unable to open data")
+            return []
+        }
+        database.close()
+        return maindata
+    }
 }
+
 

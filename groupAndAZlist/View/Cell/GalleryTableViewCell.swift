@@ -23,4 +23,8 @@ class GalleryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configer(item: GalleryItem) {
+        galleryLabel.text = item.title
+        galleryImage.image = UIImage(named: item.image)
+    }
 }

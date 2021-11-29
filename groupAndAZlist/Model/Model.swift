@@ -18,3 +18,13 @@ struct NasaItem {
     var image: String
     var action: NasaAction
 }
+
+enum NasaGallery {
+    case VideoGallery, ImageGallery
+}
+
+struct GalleryItem {
+    var title: String
+    var image: String
+    var action: NasaGallery
+}

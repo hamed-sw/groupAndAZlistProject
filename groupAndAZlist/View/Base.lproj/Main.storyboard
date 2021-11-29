@@ -159,6 +159,48 @@
             </objects>
             <point key="canvasLocation" x="1274" y="753"/>
         </scene>
+        <!--Sub Gallery View Controller-->
+        <scene sceneID="wk8-DK-WjR">
+            <objects>
+                <viewController storyboardIdentifier="SubGalleryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rAE-QP-6V3" customClass="SubGalleryViewController" customModule="groupAndAZlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hck-x7-yhS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="efd-fm-hsR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jvV-uX-9WJ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="8KT-ht-CMo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j1z-qq-eWj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="efd-fm-hsR" firstAttribute="leading" secondItem="j1z-qq-eWj" secondAttribute="leading" id="7Us-em-T2O"/>
+                            <constraint firstItem="efd-fm-hsR" firstAttribute="top" secondItem="j1z-qq-eWj" secondAttribute="top" id="9JO-nm-IEm"/>
+                            <constraint firstItem="j1z-qq-eWj" firstAttribute="trailing" secondItem="efd-fm-hsR" secondAttribute="trailing" id="Mb5-Yg-5df"/>
+                            <constraint firstItem="j1z-qq-eWj" firstAttribute="bottom" secondItem="efd-fm-hsR" secondAttribute="bottom" id="Rcf-EI-tWA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activeIndicator" destination="8KT-ht-CMo" id="xFw-hk-5Nb"/>
+                        <outlet property="collectionView" destination="efd-fm-hsR" id="DDf-J0-dCI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0J-2z-IuI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="1451"/>
+        </scene>
         <!--List View Controller-->
         <scene sceneID="fV7-zg-mT1">
             <objects>

@@ -16,6 +16,7 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
     var thesegment = MainViewController()
+    lazy var viewModel = GalleryViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         segment.selectedSegmentIndex = 0
@@ -25,6 +26,8 @@ class GalleryViewController: UIViewController {
         tableView.dataSource = self
         segmentOn()
         navigationConfig()
+        startActiveIndicator()
+        updateViewAndIndicator()
 
     }
 
@@ -54,6 +57,15 @@ class GalleryViewController: UIViewController {
             
         }
     }
+    func updateViewAndIndicator() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.activeIndicator.stopAnimating()
+            self.activeIndicator.hidesWhenStopped = true
+        }
+    }
+    func startActiveIndicator() {
+        activeIndicator.startAnimating()
+    }
     
     private func cellRegister() {
         tableView.register(UINib(nibName: String.CellIdentifire.galleryCell, bundle: nil), forCellReuseIdentifier: String.CellIdentifire.galleryCell)
@@ -70,13 +82,29 @@ class GalleryViewController: UIViewController {
 extension GalleryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return viewModel.item.value?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.galleryCell, for: indexPath) as? GalleryTableViewCell else { fatalError()}
-        cell.galleryLabel.text = "gallery"
+        let item = viewModel.item.value![indexPath.row]
+        cell.configer(item: item)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SubGalleryViewController") as? SubGalleryViewController else { fatalError()}
+        let item = viewModel.item.value![indexPath.row]
+        switch (item.action) {
+        case .ImageGallery:
+            vc.custominit(intex: 0)
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .VideoGallery:
+            vc.custominit(intex: 1)
+            self.navigationController?.pushViewController(vc, animated: true)
+        
+        }
+        
     }
     
     

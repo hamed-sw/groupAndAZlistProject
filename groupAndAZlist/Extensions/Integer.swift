@@ -12,6 +12,7 @@ extension Int {
     static var segmentIndextZero: Int { 0}
     static var segmentIndextOne: Int { 1}
     static var segmentIndextTwo: Int { 2}
+    static var indexpathNumber: Int { 0}
 
 
 

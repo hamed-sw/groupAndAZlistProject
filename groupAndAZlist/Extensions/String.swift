@@ -13,6 +13,7 @@ extension String {
         static var azlistCell: String { return "AZListTableViewCell"}
         static var groupCell: String { return "GroupTableViewCell"}
         static var headerIdentifier: String { return "header"}
+        static var SubGalleryCell: String { return "SubGalleryCollectionViewCell"}
     }
     
     struct StoryBoardIdentity {
@@ -25,6 +26,8 @@ extension String {
         static var rocetLaunch: String { return "launch"}
         static var nasaPlanetary: String { return "planetary"}
         static var nasaSpaceShip: String { return "nasa_spaceship"}
+        static var videoImageGallery: String { return "video"}
+        static var imageGallery: String { return "images"}
     }
     
 
