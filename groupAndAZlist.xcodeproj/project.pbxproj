@@ -46,6 +46,8 @@
 		FACFCA822753E61800D876B2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA812753E61800D876B2 /* Database.swift */; };
 		FACFCA842753E7C600D876B2 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA832753E7C600D876B2 /* model.swift */; };
 		FACFCA8627540AAD00D876B2 /* nasaDatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */; };
+		FACFCA8E2754296400D876B2 /* GroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */; };
+		FACFCA902754BB7700D876B2 /* HeaderAndFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA8F2754BB7600D876B2 /* HeaderAndFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		FACFCA812753E61800D876B2 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FACFCA832753E7C600D876B2 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nasaDatabase.sqlite; sourceTree = "<group>"; };
+		FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewModel.swift; sourceTree = "<group>"; };
+		FACFCA8F2754BB7600D876B2 /* HeaderAndFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAndFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +155,12 @@
 				FACFCA462750EEB200D876B2 /* Extensions */,
 				FACFCA342750E0E900D876B2 /* Model */,
 				FACFCA392750E14300D876B2 /* View */,
-				FACFCA362750E0FF00D876B2 /* ViewController */,
+				FACFCA892754271000D876B2 /* MainVC */,
+				FACFCA8A2754271400D876B2 /* GalleryVC */,
+				FACFCA8B275427A700D876B2 /* Grouplist */,
+				FACFCA87275426F600D876B2 /* AZlist */,
+				FACFCA362750E0FF00D876B2 /* NasaVC */,
+				FACFCA8C275427FE00D876B2 /* Details */,
 				FACFCA352750E0F500D876B2 /* ViewModel */,
 				FACFCA4B2751081900D876B2 /* Navigation */,
 				FACFCA372750E10900D876B2 /* Worker */,
@@ -180,21 +189,17 @@
 				FACFCA3E2750E1CB00D876B2 /* ViewModel.swift */,
 				FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */,
 				FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */,
+				FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		FACFCA362750E0FF00D876B2 /* ViewController */ = {
+		FACFCA362750E0FF00D876B2 /* NasaVC */ = {
 			isa = PBXGroup;
 			children = (
 				FACFCA5527511E5500D876B2 /* NasaViewController.swift */,
-				FACFCA5927515C8D00D876B2 /* MainViewController.swift */,
-				FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */,
-				FACFCA5D2751621100D876B2 /* AZListViewController.swift */,
-				FACFCA612751623C00D876B2 /* GroupViewController.swift */,
-				FACFCA632751652B00D876B2 /* DetailViewController.swift */,
 			);
-			path = ViewController;
+			path = NasaVC;
 			sourceTree = "<group>";
 		};
 		FACFCA372750E10900D876B2 /* Worker */ = {
@@ -230,6 +235,7 @@
 				FACFCA472750EED300D876B2 /* UIColor.swift */,
 				FACFCA3A2750E17F00D876B2 /* String.swift */,
 				FACFCA492750EEFB00D876B2 /* NotificationName.swift */,
+				FACFCA8F2754BB7600D876B2 /* HeaderAndFooter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,6 +288,47 @@
 				FACFCA832753E7C600D876B2 /* model.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		FACFCA87275426F600D876B2 /* AZlist */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA5D2751621100D876B2 /* AZListViewController.swift */,
+			);
+			path = AZlist;
+			sourceTree = "<group>";
+		};
+		FACFCA892754271000D876B2 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA5927515C8D00D876B2 /* MainViewController.swift */,
+			);
+			name = MainVC;
+			path = "New Group/New Group/MainVC";
+			sourceTree = "<group>";
+		};
+		FACFCA8A2754271400D876B2 /* GalleryVC */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */,
+			);
+			path = GalleryVC;
+			sourceTree = "<group>";
+		};
+		FACFCA8B275427A700D876B2 /* Grouplist */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA612751623C00D876B2 /* GroupViewController.swift */,
+			);
+			path = Grouplist;
+			sourceTree = "<group>";
+		};
+		FACFCA8C275427FE00D876B2 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA632751652B00D876B2 /* DetailViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,12 +470,14 @@
 				FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */,
 				FACFCA3B2750E18000D876B2 /* String.swift in Sources */,
 				FACFCA642751652B00D876B2 /* DetailViewController.swift in Sources */,
+				FACFCA8E2754296400D876B2 /* GroupListViewModel.swift in Sources */,
 				FACFCA482750EED300D876B2 /* UIColor.swift in Sources */,
 				FACFCA5A27515C8E00D876B2 /* MainViewController.swift in Sources */,
 				FACFCA582751255C00D876B2 /* CarouselFlowLayout.swift in Sources */,
 				FACFCA5E2751621100D876B2 /* AZListViewController.swift in Sources */,
 				FACFCA3F2750E1CB00D876B2 /* ViewModel.swift in Sources */,
 				FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */,
+				FACFCA902754BB7700D876B2 /* HeaderAndFooter.swift in Sources */,
 				FACFCA7D2753BBF500D876B2 /* AZlistViewModel.swift in Sources */,
 				FACFCA842753E7C600D876B2 /* model.swift in Sources */,
 				FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */,

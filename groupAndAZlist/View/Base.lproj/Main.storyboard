@@ -114,9 +114,9 @@
                                             <rect key="frame" x="108.5" y="11" width="197" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="First"/>
-                                                <segment title="Second"/>
-                                                <segment title="third"/>
+                                                <segment title="" image="square.grid.2x2.fill" catalog="system"/>
+                                                <segment title="" image="list.dash.header.rectangle" catalog="system"/>
+                                                <segment title="" image="rectangle.3.group" catalog="system"/>
                                             </segments>
                                             <connections>
                                                 <action selector="segmentTapped:" destination="k09-lP-sBa" eventType="valueChanged" id="Dn7-QN-FOL"/>
@@ -180,9 +180,9 @@
                                             <rect key="frame" x="108.5" y="11" width="197" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="First"/>
-                                                <segment title="Second"/>
-                                                <segment title="third"/>
+                                                <segment title="" image="square.grid.2x2.fill" catalog="system"/>
+                                                <segment title="" image="list.dash.header.rectangle" catalog="system"/>
+                                                <segment title="" image="rectangle.3.group" catalog="system"/>
                                             </segments>
                                             <connections>
                                                 <action selector="segmentTapped:" destination="ooO-8D-Vzc" eventType="valueChanged" id="Grq-Fy-6oQ"/>
@@ -268,9 +268,9 @@
                                             <rect key="frame" x="108.5" y="11" width="197" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="First"/>
-                                                <segment title="Second"/>
-                                                <segment title="third"/>
+                                                <segment title="" image="square.grid.2x2.fill" catalog="system"/>
+                                                <segment title="" image="list.dash.header.rectangle" catalog="system"/>
+                                                <segment title="" image="rectangle.3.group" catalog="system"/>
                                             </segments>
                                             <connections>
                                                 <action selector="segmentTapped:" destination="U3C-RQ-Jhl" eventType="valueChanged" id="R5O-sH-bGG"/>
@@ -511,6 +511,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="213" height="339"/>
+        <image name="list.dash.header.rectangle" catalog="system" width="128" height="93"/>
+        <image name="rectangle.3.group" catalog="system" width="128" height="81"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <namedColor name="NavBarTint">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

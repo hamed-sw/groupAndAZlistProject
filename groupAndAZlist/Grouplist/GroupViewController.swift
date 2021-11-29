@@ -17,9 +17,13 @@ class GroupViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var thesegment = MainViewController()
     lazy var viewModel = AZlistAndGroupViewModel()
+    lazy var grouViewModel = GroupListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        grouViewModel.fetchData()
+       // grouViewModel.groupArryData
+        print(grouViewModel.groupArryData)
         viewModel.indicatorUIView = self.activeView
         viewModel.activeIndacater = self.activeIndicator
         startActivindicator()
@@ -83,6 +87,7 @@ class GroupViewController: UIViewController {
     
     private func cellRegister() {
         tableView.register(UINib(nibName: String.CellIdentifire.groupCell, bundle: nil), forCellReuseIdentifier: String.CellIdentifire.groupCell)
+        tableView.register(HeaderTabelView.self, forHeaderFooterViewReuseIdentifier: String.CellIdentifire.headerIdentifier)
     }
     private func segmentOn() {
         NotificationCenter.default.addObserver(self, selector: #selector(tapped), name: .segmentGroupOn, object: nil)
@@ -95,15 +100,53 @@ class GroupViewController: UIViewController {
 
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return grouViewModel.groupArryData.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.nasaDara.count
+        if grouViewModel.groupArryData[section].isActive == true {
+            return grouViewModel.groupArryData[section].section.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.groupCell, for: indexPath) as? GroupTableViewCell else { fatalError()}
-        let data = viewModel.nasaDara[indexPath.row]
+        let data = grouViewModel.groupArryData[indexPath.section].section[indexPath.row]
         cell.config(data: data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String.CellIdentifire.headerIdentifier) as? HeaderTabelView
+        header?.button.addTarget(self, action: #selector(sectionTapped), for: .touchUpInside)
+        header?.button.tag = section
+       
+        
+        if grouViewModel.groupArryData[section].isActive == false {
+            header?.image.image = UIImage(systemName: "chevron.forward")
+        }else {
+            header?.image.image = UIImage(systemName: "chevron.down")
+        }
+        header?.label.text = grouViewModel.groupArryData[section].mediaType
+        return header
+    }
+    @objc func sectionTapped(button:UIButton) {
+        if grouViewModel.groupArryData[button.tag].isActive == true {
+            grouViewModel.groupArryData[button.tag].isActive = false
+            tableView.reloadSections(IndexSet(integer: button.tag), with: .fade)
+         
+        } else {
+            grouViewModel.groupArryData[button.tag].isActive = true
+            tableView.reloadSections(IndexSet(integer: button.tag), with: .fade)
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
     
     

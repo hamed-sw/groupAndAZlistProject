@@ -17,6 +17,8 @@ struct DataModel {
     var url: String
 }
 
-struct AZlistData {
-    
+struct GroupData {
+    var isActive:Bool
+    var mediaType: String
+    var section:[DataModel]
 }

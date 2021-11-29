@@ -12,6 +12,7 @@ extension String {
         static var galleryCell: String { return "GalleryTableViewCell"}
         static var azlistCell: String { return "AZListTableViewCell"}
         static var groupCell: String { return "GroupTableViewCell"}
+        static var headerIdentifier: String { return "header"}
     }
     
     struct StoryBoardIdentity {
