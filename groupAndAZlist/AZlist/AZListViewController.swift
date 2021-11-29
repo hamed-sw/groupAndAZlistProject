@@ -30,7 +30,7 @@ class AZListViewController: UIViewController {
         viewModel.startActiveIndicater()
         viewModel.tableView = self.tableView
         viewModel.getdatafromDatabase()
-        jsonUpdate()
+       // jsonUpdate()
         cellRegister()
         tableView.delegate = self
         tableView.dataSource = self
@@ -43,9 +43,9 @@ class AZListViewController: UIViewController {
         navigationConfig()
 
     }
-    func jsonUpdate() {
-        viewModel.getData()
-    }
+//    func jsonUpdate() {
+//        viewModel.getData()
+//    }
     func navigationConfig() {
         let appearance = UIToolbarAppearance()
         toolbar.tintColor = UIColor.AppThems.navBarTint
@@ -145,6 +145,18 @@ extension AZListViewController: UITableViewDelegate, UITableViewDataSource {
 
       //  cell.configar(data: datas)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detail = storyBoard.instantiateViewController(withIdentifier: String.StoryBoardIdentity.detailVC) as? DetailViewController else { fatalError()}
+        let userkey = viewModel.userSection[indexPath.section]
+        if let user = viewModel.azLisDic[userkey.uppercased()] {
+            let id = user[indexPath.row].id
+            detail.custoninit(id: id)
+        }
+       // navigationController?.pushViewController(detail, animated: true)
+        splitViewController?.showDetailViewController(detail, sender: nil)
     }
     
 }

@@ -14,10 +14,14 @@ extension String {
         static var groupCell: String { return "GroupTableViewCell"}
         static var headerIdentifier: String { return "header"}
         static var SubGalleryCell: String { return "SubGalleryCollectionViewCell"}
+        static var detailImageCell: String { return "DetailImageTableViewCell"}
+        static var detailExplanationCell: String { return "DetailExplanationTableViewCell"}
+        static var detailCollectionCell: String { return "DetailCollectionViewCell"}
     }
     
     struct StoryBoardIdentity {
         static var MainVC: String { return "MainViewController"}
+        static var detailVC: String { return "DetailViewController"}
         
     }
     struct ImageNames {

@@ -42,14 +42,14 @@ class HeaderTabelView: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
         if UIDevice.current.userInterfaceIdiom == .phone {
-            image.frame = CGRect(x: 5, y: 10, width: 25, height: 25)
-            label.frame = CGRect(x: 35, y: 10, width: 200, height: 25)
-            label.font = .systemFont(ofSize: 25)
+            image.frame = CGRect(x: 5, y: 5, width: 25, height: 25)
+            label.frame = CGRect(x: 35, y: 5, width: 200, height: 25)
+            label.font = .systemFont(ofSize: 20)
             button.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: 40)
         } else if UIDevice.current.userInterfaceIdiom == .pad {
-            image.frame = CGRect(x: 5, y: 8, width: 20, height: 20)
-            label.frame = CGRect(x: 30, y: 8, width: 200, height: 20)
-            label.font = .systemFont(ofSize: 20)
+            image.frame = CGRect(x: 5, y: 5, width: 20, height: 20)
+            label.frame = CGRect(x: 30, y: 5, width: 200, height: 20)
+            label.font = .systemFont(ofSize: 18)
             button.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: 40)
             
         }

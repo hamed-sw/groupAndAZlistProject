@@ -410,13 +410,39 @@
         <!--Detail View Controller-->
         <scene sceneID="hlI-dA-gxY">
             <objects>
-                <viewController id="DKH-fB-c64" customClass="DetailViewController" customModule="groupAndAZlist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DKH-fB-c64" customClass="DetailViewController" customModule="groupAndAZlist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZcX-3l-2j5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XLG-qd-HRj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="686"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XN-jU-3aV">
+                                <rect key="frame" x="0.0" y="774" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="UkU-Mi-vmC"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ptm-I1-YYA"/>
+                                    <barButtonItem title="Item" id="a0c-aJ-eqs"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uMh-aY-mQf"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="6XN-jU-3aV" firstAttribute="bottom" secondItem="uMh-aY-mQf" secondAttribute="bottom" id="3ra-Xo-FCd"/>
+                            <constraint firstItem="uMh-aY-mQf" firstAttribute="trailing" secondItem="XLG-qd-HRj" secondAttribute="trailing" id="DZ2-kY-OyB"/>
+                            <constraint firstItem="XLG-qd-HRj" firstAttribute="top" secondItem="uMh-aY-mQf" secondAttribute="top" id="Ikz-5Q-dtH"/>
+                            <constraint firstItem="6XN-jU-3aV" firstAttribute="trailing" secondItem="uMh-aY-mQf" secondAttribute="trailing" id="JCm-rB-kd9"/>
+                            <constraint firstItem="6XN-jU-3aV" firstAttribute="leading" secondItem="uMh-aY-mQf" secondAttribute="leading" id="Xpy-Gx-3sc"/>
+                            <constraint firstItem="6XN-jU-3aV" firstAttribute="top" secondItem="XLG-qd-HRj" secondAttribute="bottom" id="icG-dc-WEz"/>
+                            <constraint firstItem="XLG-qd-HRj" firstAttribute="leading" secondItem="uMh-aY-mQf" secondAttribute="leading" id="rAC-md-lKr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="XLG-qd-HRj" id="E3L-YU-Rtn"/>
+                        <outlet property="toolbar" destination="6XN-jU-3aV" id="kUY-hT-vSQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd7-dg-rYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -564,9 +590,6 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

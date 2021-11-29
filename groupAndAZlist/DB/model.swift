@@ -15,6 +15,7 @@ struct DataBaseModel {
     var service_version: String?
     var title: String?
     var url: String?
+    var id: String?
 }
 
 struct ImageData {
@@ -25,6 +26,8 @@ struct ImageData {
     var service_version: String?
     var title: String?
     var url: String?
+    var id: String?
+
 }
 struct VideoData {
     var date: String?
@@ -34,4 +37,16 @@ struct VideoData {
     var service_version: String?
     var title: String?
     var url: String?
+    var id: String?
+}
+
+struct DetailData {
+    var date: String?
+    var explanation: String?
+    var hdurl: String?
+    var media_type: String?
+    var service_version: String?
+    var title: String?
+    var url: String?
+    var id: String?
 }

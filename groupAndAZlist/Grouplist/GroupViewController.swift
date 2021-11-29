@@ -41,15 +41,15 @@ class GroupViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateViewAndIndicator()
-        jsonUpdate()
+        //jsonUpdate()
         segmentOn()
         navigationConfig()
 
     }
-    func jsonUpdate() {
-        viewModel.getData()
-    }
-    
+//    func jsonUpdate() {
+//        viewModel.getData()
+//    }
+//
     func navigationConfig() {
         let appearance = UIToolbarAppearance()
         toolBar.tintColor = UIColor.AppThems.navBarTint
@@ -152,6 +152,14 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
         return .headerHieght
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detail = storyBoard.instantiateViewController(withIdentifier: String.StoryBoardIdentity.detailVC) as? DetailViewController else { fatalError()}
+        let id = grouViewModel.groupArryData[indexPath.section].section[indexPath.row].id
+        detail.custoninit(id: id)
+        
+        splitViewController?.showDetailViewController(detail, sender: nil)
+    }
 
     
     

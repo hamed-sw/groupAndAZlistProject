@@ -34,7 +34,8 @@ class GalleryViewModel: NSObject {
                                                   media_type: user.media_type,
                                                   service_version: user.service_version,
                                                   title: user.title,
-                                                  url: user.url))
+                                                  url: user.url,
+                                                  id: user.id))
         }
         
     }
@@ -48,7 +49,8 @@ class GalleryViewModel: NSObject {
                                                   media_type: user.media_type,
                                                   service_version: user.service_version,
                                                   title: user.title,
-                                                  url: user.url))
+                                                  url: user.url,
+                                                  id: user.id))
         }
     }
     

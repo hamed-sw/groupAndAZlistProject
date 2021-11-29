@@ -53,7 +53,8 @@ class Database {
                                          mediaType: rs.string(forColumn: "media_type") ?? "",
                                          serviceVersion: rs.string(forColumn: "service_version") ?? "",
                                          title: rs.string(forColumn: "title") ?? "",
-                                         url: rs.string(forColumn: "url") ?? "")
+                                         url: rs.string(forColumn: "url") ?? "",
+                                         id: rs.string(forColumn: "id") ?? "")
                     maindata.append(item)
                 }
             }catch {
@@ -79,7 +80,8 @@ class Database {
                                          media_type: rs.string(forColumn: "media_type") ?? "",
                                          service_version: rs.string(forColumn: "service_version") ?? "",
                                          title: rs.string(forColumn: "title") ?? "",
-                                         url: rs.string(forColumn: "url") ?? "")
+                                         url: rs.string(forColumn: "url") ?? "",
+                                         id: rs.string(forColumn: "id") ?? "")
                     maindata.append(item)
                 }
             }catch {
@@ -105,7 +107,36 @@ class Database {
                                          media_type: rs.string(forColumn: "media_type") ?? "",
                                          service_version: rs.string(forColumn: "service_version") ?? "",
                                          title: rs.string(forColumn: "title") ?? "",
-                                         url: rs.string(forColumn: "url") ?? "")
+                                         url: rs.string(forColumn: "url") ?? "",
+                                         id: rs.string(forColumn: "id") ?? "")
+                    maindata.append(item)
+                }
+            }catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("sorry unable to open data")
+            return []
+        }
+        database.close()
+        return maindata
+    }
+    
+    func getDetailData(id:String) -> [DetailData] {
+        var maindata = [DetailData]()
+        let database = FMDatabase(url: fileUrl)
+        if  database.open() {
+            do {
+                let rs = try database.executeQuery("SELECT * from NASA_PLANETARY where id = \(id)", values: nil)
+                while rs.next() {
+                    let item = DetailData(date: rs.string(forColumn: "date") ?? "",
+                                         explanation: rs.string(forColumn: "explanation") ?? "",
+                                         hdurl: rs.string(forColumn: "hdurl") ?? "",
+                                         media_type: rs.string(forColumn: "media_type") ?? "",
+                                         service_version: rs.string(forColumn: "service_version") ?? "",
+                                         title: rs.string(forColumn: "title") ?? "",
+                                         url: rs.string(forColumn: "url") ?? "",
+                                          id: rs.string(forColumn: "id") ?? "")
                     maindata.append(item)
                 }
             }catch {

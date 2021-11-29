@@ -15,6 +15,7 @@ struct DataModel {
     var serviceVersion: String
     var title: String
     var url: String
+    var id: String
 }
 
 struct GroupData {
