@@ -8,18 +8,16 @@
 import UIKit
 
 class GalleryViewModel: NSObject {
-    var item = Bindable<[GalleryItem]>()
+    var galleryitem = [GalleryItem]()
     
     override init() {
         super .init()
         getGalleryItem()
     }
     func getGalleryItem() {
-        var galleryItem = [GalleryItem]()
-        galleryItem.append(GalleryItem(title: "Images", image: String.ImageNames.imageGallery, action: NasaGallery.ImageGallery ))
-        galleryItem.append(GalleryItem(title: "Videos", image: String.ImageNames.videoImageGallery, action: NasaGallery.VideoGallery))
+        galleryitem.append(GalleryItem(title: "Images", image: String.ImageNames.imageGallery, action: NasaGallery.ImageGallery ))
+        galleryitem.append(GalleryItem(title: "Videos", image: String.ImageNames.videoImageGallery, action: NasaGallery.VideoGallery))
         
-        self.item.value = galleryItem
     }
     
     var subGalleryVideoArray = [VideoData]()

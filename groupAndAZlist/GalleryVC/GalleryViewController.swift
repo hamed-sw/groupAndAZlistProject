@@ -82,28 +82,32 @@ class GalleryViewController: UIViewController {
 extension GalleryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.item.value?.count ?? 0
+        return viewModel.galleryitem.count
+        //viewModel.item.value?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String.CellIdentifire.galleryCell, for: indexPath) as? GalleryTableViewCell else { fatalError()}
-        let item = viewModel.item.value![indexPath.row]
-        cell.configer(item: item)
+       // let item = viewModel.item.value![indexPath.row]
+        let theitme = viewModel.galleryitem[indexPath.row]
+        cell.configer(item: theitme)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "SubGalleryViewController") as? SubGalleryViewController else { fatalError()}
-        let item = viewModel.item.value![indexPath.row]
-        switch (item.action) {
+        //let item = viewModel.item.value![indexPath.row]
+        let theitem = viewModel.galleryitem[indexPath.row]
+        switch (theitem.action) {
         case .ImageGallery:
             vc.custominit(intex: 0)
             self.navigationController?.pushViewController(vc, animated: true)
         case .VideoGallery:
             vc.custominit(intex: 1)
             self.navigationController?.pushViewController(vc, animated: true)
-        
+            
         }
+
         
     }
     
