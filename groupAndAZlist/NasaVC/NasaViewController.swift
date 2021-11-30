@@ -46,7 +46,7 @@ class NasaViewController: UIViewController {
         }
     }
     private func setcoustomlayout() {
-        let layout = CarouselFlowLayout()
+        let layout = NasaFlowLayout()
         layout.itemSize = CGSize(width: 200, height: 250)
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout

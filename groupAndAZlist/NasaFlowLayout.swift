@@ -8,13 +8,13 @@
 import UIKit
 
 
-public enum UPCarouselFlowLayoutSpacingMode {
+public enum UPNasaFlowLayoutSpacingMode {
     case fixed(spacing: CGFloat)
     case overlap(visibleOffset: CGFloat)
 }
 
 
-open class CarouselFlowLayout: UICollectionViewFlowLayout {
+open class NasaFlowLayout: UICollectionViewFlowLayout {
     
     fileprivate struct LayoutState {
         var size: CGSize
@@ -27,7 +27,7 @@ open class CarouselFlowLayout: UICollectionViewFlowLayout {
     @IBInspectable open var sideItemScale: CGFloat = 0.6
     @IBInspectable open var sideItemAlpha: CGFloat = 0.6
     @IBInspectable open var sideItemShift: CGFloat = 0.0
-    open var spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 40)
+    open var spacingMode = UPNasaFlowLayoutSpacingMode.fixed(spacing: 40)
     
     fileprivate var state = LayoutState(size: CGSize.zero, direction: .horizontal)
     
