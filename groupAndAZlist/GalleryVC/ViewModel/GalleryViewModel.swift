@@ -60,5 +60,13 @@ class GalleryViewModel: NSObject {
             }
         }
     }
+    func imageDownload1(str: String, cell:GallerymainCollectionViewCell) {
+        DownloadImages.imageDownload(string: str) { data in
+            guard let imageData = UIImage(data: data) else { return}
+            DispatchQueue.main.async {
+                cell.galleryImage.image = imageData
+            }
+        }
+    }
     
 }

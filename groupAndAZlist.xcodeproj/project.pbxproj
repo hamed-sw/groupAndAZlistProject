@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		821BDE5BA5B3EFC34AFD2C20 /* Pods_groupAndAZlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */; };
+		FA2E9E992756425C00E9E70A /* GallerymainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2E9E982756425C00E9E70A /* GallerymainViewController.swift */; };
+		FA2E9E9F275642C800E9E70A /* GallerymainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2E9E9D275642C800E9E70A /* GallerymainCollectionViewCell.swift */; };
+		FA2E9EA0275642C800E9E70A /* GallerymainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2E9E9E275642C800E9E70A /* GallerymainCollectionViewCell.xib */; };
 		FAB493002754E7AA00895542 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB492FF2754E7AA00895542 /* CGFloat.swift */; };
 		FAB493022755074A00895542 /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB493012755074A00895542 /* Integer.swift */; };
 		FAB4930527550ACF00895542 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4930427550ACF00895542 /* GalleryViewModel.swift */; };
@@ -38,7 +41,6 @@
 		FACFCA5227510D5C00D876B2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5127510D5C00D876B2 /* Bindable.swift */; };
 		FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */; };
 		FACFCA5627511E5500D876B2 /* NasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5527511E5500D876B2 /* NasaViewController.swift */; };
-		FACFCA582751255C00D876B2 /* NasaFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA572751255C00D876B2 /* NasaFlowLayout.swift */; };
 		FACFCA5A27515C8E00D876B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5927515C8D00D876B2 /* MainViewController.swift */; };
 		FACFCA5E2751621100D876B2 /* AZListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5D2751621100D876B2 /* AZListViewController.swift */; };
 		FACFCA602751622B00D876B2 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */; };
@@ -61,12 +63,16 @@
 		FACFCA8627540AAD00D876B2 /* nasaDatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */; };
 		FACFCA8E2754296400D876B2 /* GroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */; };
 		FACFCA902754BB7700D876B2 /* HeaderAndFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFCA8F2754BB7600D876B2 /* HeaderAndFooter.swift */; };
+		FAE84B142757852A00FA3262 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE84B132757852A00FA3262 /* FlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2FDA7B85AAB82534F366977E /* Pods-groupAndAZlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-groupAndAZlist.debug.xcconfig"; path = "Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist.debug.xcconfig"; sourceTree = "<group>"; };
 		35393AACE25C86EF8CF43A8A /* Pods-groupAndAZlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-groupAndAZlist.release.xcconfig"; path = "Target Support Files/Pods-groupAndAZlist/Pods-groupAndAZlist.release.xcconfig"; sourceTree = "<group>"; };
 		B9DDFADD2248F1D6F4B8CCFB /* Pods_groupAndAZlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_groupAndAZlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2E9E982756425C00E9E70A /* GallerymainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerymainViewController.swift; sourceTree = "<group>"; };
+		FA2E9E9D275642C800E9E70A /* GallerymainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerymainCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA2E9E9E275642C800E9E70A /* GallerymainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GallerymainCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAB492FF2754E7AA00895542 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		FAB493012755074A00895542 /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		FAB4930427550ACF00895542 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
@@ -99,7 +105,6 @@
 		FACFCA5127510D5C00D876B2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCollectionViewCell.swift; sourceTree = "<group>"; };
 		FACFCA5527511E5500D876B2 /* NasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewController.swift; sourceTree = "<group>"; };
-		FACFCA572751255C00D876B2 /* NasaFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaFlowLayout.swift; sourceTree = "<group>"; };
 		FACFCA5927515C8D00D876B2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FACFCA5D2751621100D876B2 /* AZListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZListViewController.swift; sourceTree = "<group>"; };
 		FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		FACFCA8527540AAC00D876B2 /* nasaDatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nasaDatabase.sqlite; sourceTree = "<group>"; };
 		FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewModel.swift; sourceTree = "<group>"; };
 		FACFCA8F2754BB7600D876B2 /* HeaderAndFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAndFooter.swift; sourceTree = "<group>"; };
+		FAE84B132757852A00FA3262 /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,9 +159,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA2E9E92275619B200E9E70A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2E9E93275619BA00E9E70A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4930427550ACF00895542 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2E9E94275619C700E9E70A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2E9E95275619CF00E9E70A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2E9E96275619D700E9E70A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4932F2755597600895542 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2E9E9727561A0400E9E70A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FACFCA3E2750E1CB00D876B2 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2E9E9C275642AC00E9E70A /* GallerMainCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA2E9E9D275642C800E9E70A /* GallerymainCollectionViewCell.swift */,
+				FA2E9E9E275642C800E9E70A /* GallerymainCollectionViewCell.xib */,
+			);
+			path = GallerMainCell;
+			sourceTree = "<group>";
+		};
+		FA2E9EA127564D6000E9E70A /* Not used but importend */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4931D2755303A00895542 /* GalleryTAbleViewCell */,
+				FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */,
+			);
+			path = "Not used but importend";
+			sourceTree = "<group>";
+		};
 		FAB49303275508EC00895542 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E9E92275619B200E9E70A /* ViewModel */,
 				FACFCA5927515C8D00D876B2 /* MainViewController.swift */,
 			);
 			path = MainViewController;
@@ -245,9 +317,9 @@
 				FACFCA7E2753E5EC00D876B2 /* DB */,
 				FACFCA462750EEB200D876B2 /* Extensions */,
 				FACFCA342750E0E900D876B2 /* Model */,
-				FACFCA362750E0FF00D876B2 /* NasaVC */,
 				FACFCA392750E14300D876B2 /* View */,
 				FAB49303275508EC00895542 /* MainViewController */,
+				FACFCA362750E0FF00D876B2 /* NasaVC */,
 				FACFCA8A2754271400D876B2 /* GalleryVC */,
 				FACFCA8B275427A700D876B2 /* Grouplist */,
 				FACFCA87275426F600D876B2 /* AZlist */,
@@ -257,9 +329,10 @@
 				FACFCA372750E10900D876B2 /* Worker */,
 				FACFCA382750E11A00D876B2 /* Helper */,
 				FACFCA4E275108FA00D876B2 /* Resources */,
+				FACFCA262750E0CE00D876B2 /* Main.storyboard */,
 				FACFCA2B2750E0D400D876B2 /* LaunchScreen.storyboard */,
 				FACFCA2E2750E0D400D876B2 /* Info.plist */,
-				FACFCA572751255C00D876B2 /* NasaFlowLayout.swift */,
+				FAE84B132757852A00FA3262 /* FlowLayout.swift */,
 			);
 			path = groupAndAZlist;
 			sourceTree = "<group>";
@@ -277,12 +350,7 @@
 		FACFCA352750E0F500D876B2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FACFCA3E2750E1CB00D876B2 /* ViewModel.swift */,
-				FAB4930427550ACF00895542 /* GalleryViewModel.swift */,
-				FACFCA762752B81D00D876B2 /* AZLIstAndGroupViewModel.swift */,
 				FACFCA7C2753BBF500D876B2 /* AZlistViewModel.swift */,
-				FACFCA8D2754296400D876B2 /* GroupListViewModel.swift */,
-				FAB4932F2755597600895542 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,6 +358,7 @@
 		FACFCA362750E0FF00D876B2 /* NasaVC */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E9E9727561A0400E9E70A /* ViewModel */,
 				FACFCA5527511E5500D876B2 /* NasaViewController.swift */,
 			);
 			path = NasaVC;
@@ -316,7 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				FACFCA652751663F00D876B2 /* Cell */,
-				FACFCA262750E0CE00D876B2 /* Main.storyboard */,
 				FACFCA5327511DD200D876B2 /* NasaCollectionViewCell.swift */,
 			);
 			path = View;
@@ -364,11 +432,11 @@
 		FACFCA652751663F00D876B2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E9E9C275642AC00E9E70A /* GallerMainCell */,
 				FAB49320275530A300895542 /* DetailTableViewCell */,
 				FAB4930A275515F500895542 /* GalleryCollectionCell */,
 				FAB4931F2755306F00895542 /* GroupTableViewCell */,
 				FAB4931E2755304D00895542 /* AZListTableViewCell */,
-				FAB4931D2755303A00895542 /* GalleryTAbleViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -387,6 +455,7 @@
 		FACFCA87275426F600D876B2 /* AZlist */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E9E95275619CF00E9E70A /* ViewModel */,
 				FACFCA5D2751621100D876B2 /* AZListViewController.swift */,
 			);
 			path = AZlist;
@@ -395,7 +464,9 @@
 		FACFCA8A2754271400D876B2 /* GalleryVC */ = {
 			isa = PBXGroup;
 			children = (
-				FACFCA5F2751622B00D876B2 /* GalleryViewController.swift */,
+				FA2E9EA127564D6000E9E70A /* Not used but importend */,
+				FA2E9E93275619BA00E9E70A /* ViewModel */,
+				FA2E9E982756425C00E9E70A /* GallerymainViewController.swift */,
 				FAB493172755172400895542 /* SubGalleryViewController.swift */,
 			);
 			path = GalleryVC;
@@ -404,6 +475,7 @@
 		FACFCA8B275427A700D876B2 /* Grouplist */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E9E94275619C700E9E70A /* ViewModel */,
 				FACFCA612751623C00D876B2 /* GroupViewController.swift */,
 			);
 			path = Grouplist;
@@ -412,6 +484,7 @@
 		FACFCA8C275427FE00D876B2 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E9E96275619D700E9E70A /* ViewModel */,
 				FACFCA632751652B00D876B2 /* DetailViewController.swift */,
 			);
 			path = Details;
@@ -489,6 +562,7 @@
 				FACFCA6F2751669300D876B2 /* AZListTableViewCell.xib in Resources */,
 				FACFCA73275166A200D876B2 /* GroupTableViewCell.xib in Resources */,
 				FAB493242755311A00895542 /* DetailImageTableViewCell.xib in Resources */,
+				FA2E9EA0275642C800E9E70A /* GallerymainCollectionViewCell.xib in Resources */,
 				FAB4932D2755357A00895542 /* DetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,12 +625,14 @@
 				FACFCA602751622B00D876B2 /* GalleryViewController.swift in Sources */,
 				FACFCA792752B8D200D876B2 /* DataModel.swift in Sources */,
 				FAB493272755313300895542 /* DetailExplanationTableViewCell.swift in Sources */,
+				FA2E9E992756425C00E9E70A /* GallerymainViewController.swift in Sources */,
 				FACFCA5427511DD200D876B2 /* NasaCollectionViewCell.swift in Sources */,
 				FAB493002754E7AA00895542 /* CGFloat.swift in Sources */,
 				FAB493182755172400895542 /* SubGalleryViewController.swift in Sources */,
 				FAB493022755074A00895542 /* Integer.swift in Sources */,
 				FACFCA3D2750E1AE00D876B2 /* JsonParsing.swift in Sources */,
 				FAB4932C2755357A00895542 /* DetailCollectionViewCell.swift in Sources */,
+				FA2E9E9F275642C800E9E70A /* GallerymainCollectionViewCell.swift in Sources */,
 				FACFCA212750E0CE00D876B2 /* AppDelegate.swift in Sources */,
 				FACFCA682751666600D876B2 /* GalleryTableViewCell.swift in Sources */,
 				FACFCA752752A0D600D876B2 /* JsonModel.swift in Sources */,
@@ -571,13 +647,13 @@
 				FACFCA8E2754296400D876B2 /* GroupListViewModel.swift in Sources */,
 				FACFCA482750EED300D876B2 /* UIColor.swift in Sources */,
 				FACFCA5A27515C8E00D876B2 /* MainViewController.swift in Sources */,
-				FACFCA582751255C00D876B2 /* NasaFlowLayout.swift in Sources */,
 				FACFCA5E2751621100D876B2 /* AZListViewController.swift in Sources */,
 				FAB4930527550ACF00895542 /* GalleryViewModel.swift in Sources */,
 				FACFCA3F2750E1CB00D876B2 /* ViewModel.swift in Sources */,
 				FACFCA4A2750EEFB00D876B2 /* NotificationName.swift in Sources */,
 				FACFCA902754BB7700D876B2 /* HeaderAndFooter.swift in Sources */,
 				FACFCA7D2753BBF500D876B2 /* AZlistViewModel.swift in Sources */,
+				FAE84B142757852A00FA3262 /* FlowLayout.swift in Sources */,
 				FACFCA842753E7C600D876B2 /* model.swift in Sources */,
 				FACFCA232750E0CE00D876B2 /* SceneDelegate.swift in Sources */,
 				FACFCA822753E61800D876B2 /* Database.swift in Sources */,

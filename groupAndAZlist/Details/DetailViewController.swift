@@ -21,9 +21,16 @@ class DetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         registerCell()
+        navigationBarHide()
 
     }
-    
+    func navigationBarHide() {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            navigationController?.setNavigationBarHidden(false, animated: false)
+        } else {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        }
+    }
     func custoninit(id:String) {
         self.id = id
         }

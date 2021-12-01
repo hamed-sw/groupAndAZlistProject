@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GallerymainCollectionViewCell" id="gTV-IL-0wX" customClass="GallerymainCollectionViewCell" customModule="groupAndAZlist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="201"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nasa_spaceship" translatesAutoresizingMaskIntoConstraints="NO" id="RL4-Uv-meN">
+                        <rect key="frame" x="2" y="2" width="361" height="197"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="361" id="Fb9-ww-di1"/>
+                            <constraint firstAttribute="height" constant="197" id="TKO-Gm-Mv4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVv-0z-aQx">
+                        <rect key="frame" x="245" y="55" width="120" height="92"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wVv-0z-aQx" secondAttribute="bottom" constant="54" id="3ef-My-MMa"/>
+                <constraint firstItem="RL4-Uv-meN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="CCp-Cf-PaR"/>
+                <constraint firstAttribute="trailing" secondItem="wVv-0z-aQx" secondAttribute="trailing" id="F04-5d-ggo"/>
+                <constraint firstItem="wVv-0z-aQx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="55" id="Zrp-nm-bQG"/>
+                <constraint firstAttribute="trailing" secondItem="RL4-Uv-meN" secondAttribute="trailing" constant="2" id="fL0-mA-mYZ"/>
+                <constraint firstAttribute="bottom" secondItem="RL4-Uv-meN" secondAttribute="bottom" constant="2" id="nQq-EB-ZqT"/>
+                <constraint firstItem="wVv-0z-aQx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="245" id="pHB-ll-GYZ"/>
+                <constraint firstItem="RL4-Uv-meN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="s49-Vh-Nrg"/>
+            </constraints>
+            <size key="customSize" width="365" height="201"/>
+            <connections>
+                <outlet property="galleryImage" destination="RL4-Uv-meN" id="AsE-Di-nAX"/>
+                <outlet property="gallerylabel" destination="wVv-0z-aQx" id="gPY-d0-IHf"/>
+            </connections>
+            <point key="canvasLocation" x="-10.869565217391305" y="128.23660714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="nasa_spaceship" width="300" height="168"/>
+    </resources>
+</document>

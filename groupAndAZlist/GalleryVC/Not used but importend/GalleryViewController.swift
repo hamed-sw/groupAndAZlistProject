@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/// not used becasue in the gallery i user collection view but here you have some importent trik likc tabelview cel size activeindacator etc......
 class GalleryViewController: UIViewController {
   
     

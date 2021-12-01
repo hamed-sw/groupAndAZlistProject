@@ -20,6 +20,7 @@ extension Notification.Name {
     static let segmentGroupOn =  Notification.Name("segmentGroupOn")
     static let navigationHide = Notification.Name("navigationHide")
     static let enableNavigation = Notification.Name("enableNavigation")
+    static let ipadCallSubgallery = Notification.Name("ipadCallSubgallery")
     
     
 }

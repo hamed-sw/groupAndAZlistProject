@@ -46,9 +46,10 @@ class NasaViewController: UIViewController {
         }
     }
     private func setcoustomlayout() {
-        let layout = NasaFlowLayout()
+        let layout = FlowLayout()
         layout.itemSize = CGSize(width: 200, height: 250)
         layout.scrollDirection = .horizontal
+       // layout.minimumLineSpacing = 60
         collectionView.collectionViewLayout = layout
     }
 

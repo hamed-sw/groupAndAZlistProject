@@ -17,11 +17,14 @@ extension String {
         static var detailImageCell: String { return "DetailImageTableViewCell"}
         static var detailExplanationCell: String { return "DetailExplanationTableViewCell"}
         static var detailCollectionCell: String { return "DetailCollectionViewCell"}
+        static var galleryMainCell: String { return "GallerymainCollectionViewCell"}
+        
     }
     
     struct StoryBoardIdentity {
         static var MainVC: String { return "MainViewController"}
         static var detailVC: String { return "DetailViewController"}
+        static var SubGallerVC: String { return "SubGalleryViewController"}
         
     }
     struct ImageNames {

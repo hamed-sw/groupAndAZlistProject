@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var subGalleryView: UIView!
     @IBOutlet weak var galleryView: UIView!
     @IBOutlet weak var azlistView: UIView!
     @IBOutlet weak var groupView: UIView!
@@ -33,6 +34,7 @@ class MainViewController: UIViewController {
         azListToGroupView()
         groupToGalleryview()
         groupToAzlistview()
+        whenipadCallSubgallery()
         
         
     }
@@ -44,9 +46,9 @@ class MainViewController: UIViewController {
     @objc func galleryToAz() {
         NotificationCenter.default.post(name: .segmentAZlsitOn, object: nil)
         if (UIDevice.current.userInterfaceIdiom == .phone) {
-            configerUIView(first: .zeroAlph, second: .oneAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+            configerUIView(first: .zeroAlph, second: .oneAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
-            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .oneAlph, fifth: .zeroAlph)
+            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .oneAlph, fifth: .zeroAlph, six: .zeroAlph)
             segmentIs.selectedSegmentIndex = 1
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
@@ -58,9 +60,9 @@ class MainViewController: UIViewController {
     @objc func gallerytogroup() {
         NotificationCenter.default.post(name: .segmentGroupOn, object: nil)
         if (UIDevice.current.userInterfaceIdiom == .phone) {
-            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .oneAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .oneAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
-            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .oneAlph)
+            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .oneAlph, six: .zeroAlph)
             segmentIs.selectedSegmentIndex = 2
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
@@ -71,7 +73,7 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(azlistToGaller), name: .aZlistToGalleryview, object: nil)
     }
     @objc func azlistToGaller() {
-        configerUIView(first: .oneAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+        configerUIView(first: .oneAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         NotificationCenter.default.post(name: .segmentGalleryOn, object: nil)
         NotificationCenter.default.post(name: .enableNavigation, object: nil)
         
@@ -83,9 +85,9 @@ class MainViewController: UIViewController {
     @objc func azListToGroup() {
         NotificationCenter.default.post(name: .segmentGroupOn, object: nil)
         if (UIDevice.current.userInterfaceIdiom == .phone) {
-            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .oneAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .oneAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
-            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .oneAlph)
+            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .oneAlph, six: .zeroAlph)
             segmentIs.selectedSegmentIndex = 2
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
@@ -95,7 +97,7 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(groupToGallery), name: .groupToGalleryView, object: nil)
     }
     @objc func groupToGallery() {
-        configerUIView(first: .oneAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+        configerUIView(first: .oneAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         NotificationCenter.default.post(name: .segmentGalleryOn, object: nil)
         NotificationCenter.default.post(name: .enableNavigation, object: nil)
     }
@@ -106,28 +108,36 @@ class MainViewController: UIViewController {
     @objc func groupToAzlist() {
         NotificationCenter.default.post(name: .segmentAZlsitOn, object: nil)
         if (UIDevice.current.userInterfaceIdiom == .phone) {
-            configerUIView(first: .zeroAlph, second: .oneAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+            configerUIView(first: .zeroAlph, second: .oneAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         } else if (UIDevice.current.userInterfaceIdiom == .pad) {
-            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .oneAlph, fifth: .zeroAlph)
+            configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .oneAlph, fifth: .zeroAlph, six: .zeroAlph)
             segmentIs.selectedSegmentIndex = 1
             NotificationCenter.default.post(name: .navigationHide, object: nil)
         }
     }
     
+    private func whenipadCallSubgallery() {
+        NotificationCenter.default.addObserver(self, selector: #selector(ipadCall), name: .ipadCallSubgallery, object: nil)
+
+    }
+    @objc func ipadCall() {
+        configerUIView(first: .zeroAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .oneAlph)
+    }
 
     
     func reload() {
-        configerUIView(first:.oneAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph)
+        configerUIView(first:.oneAlph, second: .zeroAlph, third: .zeroAlph, fourth: .zeroAlph, fifth: .zeroAlph, six: .zeroAlph)
         NotificationCenter.default.post(name: .segmentGalleryOn, object: nil)
 
     }
     
-    func configerUIView(first: CGFloat, second: CGFloat, third: CGFloat, fourth: CGFloat, fifth: CGFloat) {
+    func configerUIView(first: CGFloat, second: CGFloat, third: CGFloat, fourth: CGFloat, fifth: CGFloat, six: CGFloat) {
         galleryView.alpha    = first
         azlistView.alpha     = second
         groupView.alpha      = third
         aZlistIpadVIew.alpha = fourth
         groupIpadView.alpha  = fifth
+        subGalleryView.alpha = six
         
     }
 

@@ -9,12 +9,15 @@ import UIKit
 
 class SubGalleryViewController: UIViewController {
 
+    @IBOutlet weak var mianImage: UIImageView!
     @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     lazy var viewModel = GalleryViewModel()
     var indextpath:Int = .indexpathNumber
+    var image: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mianImage.image = image
         viewModel.getImage()
         viewModel.getVideo()
         registercollectionView()
@@ -22,11 +25,20 @@ class SubGalleryViewController: UIViewController {
         collectionView.dataSource = self
         startActiveIndicator()
         updateViewAndIndicator()
+        navigationBarHide()
 
     }
-    func custominit(intex:Int) {
+    func navigationBarHide() {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            navigationController?.setNavigationBarHidden(false, animated: false)
+        } else {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        }
+    }
+    func custominit(intex:Int ) {
         self.indextpath = intex
     }
+
     private func registercollectionView() {
         collectionView.register(UINib(nibName: String.CellIdentifire.SubGalleryCell, bundle: nil), forCellWithReuseIdentifier: String.CellIdentifire.SubGalleryCell)
     }
@@ -70,5 +82,20 @@ extension SubGalleryViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: 200, height: 230)
     }
 
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detail = storyboard?.instantiateViewController(withIdentifier: String.StoryBoardIdentity.detailVC) as? DetailViewController else { fatalError()}
+        if indextpath == .indexpathNumber {
+            guard let id = viewModel.subGalleryImageArray[indexPath.row].id else {return}
+            detail.custoninit(id: id)
+        }else {
+            guard let id = viewModel.subGalleryVideoArray[indexPath.row].id else { return}
+            detail.custoninit(id: id)
+        }
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            navigationController?.pushViewController(detail, animated: true)
+        } else {
+            splitViewController?.showDetailViewController(detail, sender: nil)
+        }
+    }
 }
